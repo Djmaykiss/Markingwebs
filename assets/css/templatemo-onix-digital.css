@@ -881,7 +881,7 @@ Banner Style
 
 .main-banner:before {
   content: '';
-  background-image: url(../images/Redes.png);
+  background-image: url(../images/Redes\ Sociales.png);
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
