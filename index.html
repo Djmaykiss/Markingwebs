@@ -1,792 +1,1602 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Markingwebs crea paginas web, SEO, redes sociales y publicidad digital para negocios en Estados Unidos.">
+  <meta name="author" content="Markingwebs">
+  <meta name="google-site-verification" content="7I3oPHNvRcxTSHs4aytQ3HA1bIXIluScVGWBmXFgr-Q">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="assets/images/logo01.png" type="image/x-icon">
+  <title>Markingwebs | Paginas web, SEO y marketing digital</title>
 
-<!DOCTYPE html>
-<html lang="en">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/animated.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
 
-  <head>
+  <style>
+    :root {
+      --ink: #182235;
+      --muted: #667085;
+      --line: #e6ecf2;
+      --blue: #0b76e0;
+      --navy: #09192f;
+      --green: #12b981;
+      --orange: #ff7a3d;
+      --soft: #f5f8fb;
+      --white: #ffffff;
+    }
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="google-site-verification" content="7I3oPHNvRcxTSHs4aytQ3HA1bIXIluScVGWBmXFgr-Q" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="./assets/images/logo01.png" type="image/x-icon">
+    * {
+      box-sizing: border-box;
+    }
 
-    <title>Markingwebs.com</title>
+    html {
+      scroll-behavior: smooth;
+    }
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    body {
+      margin: 0;
+      font-family: "Poppins", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+    }
 
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-onix-digital.css">
-    <link rel="stylesheet" href="assets/css/animated.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-<!--
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
+    p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.8;
+    }
 
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.94);
+      border-bottom: 1px solid rgba(230, 236, 242, 0.9);
+      backdrop-filter: blur(12px);
+    }
 
+    .navbar {
+      min-height: 78px;
+      padding: 12px 0;
+    }
 
+    .navbar-brand img {
+      width: 154px;
+      height: auto;
+    }
 
--->
+    .navbar-nav .nav-link {
+      color: #344054;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 14px;
+    }
 
-    
-    <!--Inicio de Etiqueta de Google-->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8491491533858290"
-     crossorigin="anonymous"></script>
-<!--Fin de la etiqueta de google-->
+    .navbar-nav .nav-link:hover {
+      color: var(--blue);
+    }
 
-    
-  </head>
+    .btn-brand,
+    .btn-outline-brand {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-brand {
+      background: var(--blue);
+      color: var(--white);
+      box-shadow: 0 10px 22px rgba(11, 118, 224, 0.22);
+    }
+
+    .btn-brand:hover {
+      background: #075fb7;
+      color: var(--white);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline-brand {
+      color: var(--ink);
+      border: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .btn-outline-brand:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 106px 0 70px;
+      background: var(--white);
+      color: var(--ink);
+    }
+
+    .hero h1 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(40px, 6vw, 72px);
+      line-height: 1.02;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 670px;
+      margin: 22px 0 0;
+      color: rgba(255, 255, 255, 0.84);
+      font-size: 18px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      color: #b8ddff;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 3px;
+      border-radius: 3px;
+      background: var(--green);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      max-width: 760px;
+      margin-top: 58px;
+    }
+
+    .hero-portrait {
+      position: relative;
+      max-width: 470px;
+      margin-left: auto;
+    }
+
+    .hero-portrait img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 6px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 24px 60px rgba(17, 24, 39, 0.12);
+    }
+
+    .hero-portrait-caption {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 14px;
+      color: #6b7280;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .metric {
+      padding: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 26px;
+      line-height: 1;
+      color: var(--white);
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 8px;
+      color: rgba(255, 255, 255, 0.74);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    section {
+      padding: 88px 0;
+    }
+
+    .section-soft {
+      background: var(--soft);
+    }
+
+    .section-title {
+      max-width: 760px;
+      margin-bottom: 42px;
+    }
+
+    .section-title.center {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .section-title span {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      color: var(--ink);
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.12;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .section-title p {
+      margin: 16px 0 0;
+    }
+
+    .service-card,
+    .price-card,
+    .work-card,
+    .contact-card {
+      height: 100%;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: 0 18px 40px rgba(24, 34, 53, 0.06);
+    }
+
+    .service-card {
+      padding: 30px;
+    }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 22px;
+      border-radius: 8px;
+      color: var(--blue);
+      background: #eaf4ff;
+      font-size: 22px;
+    }
+
+    .service-card h3,
+    .work-card h3 {
+      margin: 0 0 12px;
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .service-card p,
+    .work-card p {
+      margin-bottom: 0;
+      font-size: 15px;
+    }
+
+    .included-list {
+      margin: 22px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .included-list li {
+      position: relative;
+      margin-bottom: 10px;
+      padding-left: 24px;
+      color: #475467;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .included-list li::before {
+      content: "\f00c";
+      position: absolute;
+      left: 0;
+      top: 1px;
+      font-family: FontAwesome;
+      color: var(--green);
+      font-size: 13px;
+    }
+
+    .about-image {
+      overflow: hidden;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: #eef4f8;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      min-height: 440px;
+      object-fit: cover;
+    }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 26px;
+    }
+
+    .proof-item {
+      padding: 20px;
+      border-radius: 8px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+    }
+
+    .proof-item strong {
+      display: block;
+      color: var(--navy);
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .proof-item span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .work-card {
+      overflow: hidden;
+    }
+
+    .work-card img {
+      height: 230px;
+      width: 100%;
+      object-fit: cover;
+      background: #eef4f8;
+    }
+
+    .work-card .body {
+      padding: 24px;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .tag-row span {
+      display: inline-flex;
+      padding: 7px 10px;
+      border-radius: 8px;
+      background: #eef6ff;
+      color: #175cd3;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .price-card {
+      position: relative;
+      padding: 34px;
+    }
+
+    .price-card.featured {
+      border-color: rgba(11, 118, 224, 0.42);
+      box-shadow: 0 24px 54px rgba(11, 118, 224, 0.14);
+    }
+
+    .price-label {
+      display: inline-flex;
+      margin-bottom: 18px;
+      padding: 7px 10px;
+      border-radius: 8px;
+      background: #eaf4ff;
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .price-card h3 {
+      margin: 0 0 14px;
+      color: var(--ink);
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .price {
+      display: flex;
+      align-items: flex-end;
+      gap: 8px;
+      margin-bottom: 8px;
+      color: var(--navy);
+      font-size: 42px;
+      line-height: 1;
+      font-weight: 800;
+    }
+
+    .price small {
+      margin-bottom: 6px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .price-note {
+      min-height: 48px;
+      margin-bottom: 24px;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .market-note {
+      margin-top: 28px;
+      padding: 18px 20px;
+      border-radius: 8px;
+      border: 1px solid #cfe6ff;
+      background: #f0f8ff;
+      color: #1849a9;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .process-step {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .step-number {
+      flex: 0 0 42px;
+      width: 42px;
+      height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      color: var(--white);
+      background: var(--navy);
+      font-weight: 800;
+    }
+
+    .process-step h3 {
+      margin: 0 0 6px;
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .process-step p {
+      margin: 0;
+      font-size: 15px;
+    }
+
+    .contact-section {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .contact-section .section-title h2,
+    .contact-section .section-title span {
+      color: var(--white);
+    }
+
+    .contact-section .section-title p {
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .contact-card {
+      padding: 34px;
+      color: var(--ink);
+    }
+
+    .contact-line {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+      color: #344054;
+      font-weight: 600;
+    }
+
+    .contact-line i {
+      width: 42px;
+      height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      color: var(--blue);
+      background: #eaf4ff;
+    }
+
+    .form-control,
+    .custom-select {
+      min-height: 48px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--ink);
+      font-size: 14px;
+    }
+
+    textarea.form-control {
+      min-height: 132px;
+      resize: vertical;
+    }
+
+    .site-footer {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .footer-logo {
+      width: 150px;
+      margin-bottom: 12px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .social-links a {
+      width: 38px;
+      height: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      color: var(--blue);
+      background: #eaf4ff;
+    }
+
+    .social-links a:hover {
+      color: var(--white);
+      background: var(--blue);
+    }
+
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        padding: 16px 0 20px;
+      }
+
+      .hero {
+        padding-top: 74px;
+      }
+
+      .hero-metrics {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 64px 0;
+      }
+
+      .about-image img {
+        min-height: 300px;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .proof-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions .btn-brand,
+      .hero-actions .btn-outline-brand {
+        width: 100%;
+      }
+
+      .price {
+        font-size: 36px;
+      }
+    }
+
+    /* Minimal professional refresh */
+    :root {
+      --ink: #111827;
+      --muted: #5f6876;
+      --line: #e5e7eb;
+      --blue: #155eef;
+      --navy: #101828;
+      --green: #16a34a;
+      --orange: #c2410c;
+      --soft: #f8fafc;
+      --white: #ffffff;
+    }
+
+    body {
+      background: #ffffff;
+      color: var(--ink);
+      letter-spacing: 0;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .site-header {
+      background: rgba(255, 255, 255, 0.98);
+      border-bottom: 1px solid #eef0f3;
+      backdrop-filter: blur(18px);
+    }
+
+    .navbar {
+      min-height: 72px;
+    }
+
+    .navbar-brand img {
+      width: 142px;
+    }
+
+    .navbar-nav .nav-link {
+      color: #4b5563;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 10px 12px;
+    }
+
+    .btn-brand,
+    .btn-outline-brand {
+      min-height: 44px;
+      border-radius: 6px;
+      padding: 11px 18px;
+      font-size: 13px;
+      box-shadow: none;
+    }
+
+    .btn-brand {
+      background: #f97316;
+      color: #ffffff;
+    }
+
+    .btn-brand:hover {
+      background: #ea580c;
+      transform: none;
+    }
+
+    .btn-outline-brand {
+      border-color: #d1d5db;
+      color: #111827;
+      background: #ffffff;
+    }
+
+    .btn-outline-brand:hover {
+      border-color: #111827;
+      color: #111827;
+    }
+
+    .hero {
+      min-height: 780px;
+      display: flex;
+      align-items: center;
+      padding: 86px 0 58px;
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 43%, rgba(255, 255, 255, 0.24) 66%, rgba(255, 255, 255, 0.1) 100%),
+        url("assets/images/hero-agency-banner.png") center right / cover no-repeat;
+      color: var(--ink);
+      border-bottom: 1px solid #eef0f3;
+    }
+
+    .hero .container {
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .hero h1 {
+      max-width: 620px;
+      color: #0f172a;
+      font-size: clamp(42px, 5vw, 72px);
+      line-height: 0.98;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .hero p {
+      max-width: 560px;
+      color: #4b5563;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .eyebrow {
+      color: #374151;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+    }
+
+    .eyebrow::before {
+      width: 28px;
+      height: 2px;
+      background: #f97316;
+    }
+
+    .hero-actions {
+      margin-top: 30px;
+    }
+
+    .hero-metrics {
+      max-width: 720px;
+      margin-top: 48px;
+      gap: 0;
+      border-top: 1px solid #e5e7eb;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .metric {
+      padding: 19px 24px 19px 0;
+      border: 0;
+      border-right: 1px solid #e5e7eb;
+      border-radius: 0;
+      background: transparent;
+    }
+
+    .metric:last-child {
+      border-right: 0;
+      padding-left: 26px;
+    }
+
+    .metric:nth-child(2) {
+      padding-left: 26px;
+    }
+
+    .metric strong {
+      color: #111827;
+      font-size: 19px;
+      font-weight: 800;
+    }
+
+    .metric span {
+      color: #6b7280;
+      font-size: 13px;
+    }
+
+    .hero-services {
+      position: absolute;
+      right: 8vw;
+      bottom: 122px;
+      z-index: 2;
+      max-width: 280px;
+      margin-left: auto;
+      padding: 28px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid rgba(17, 24, 39, 0.08);
+      box-shadow: 0 24px 60px rgba(17, 24, 39, 0.12);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-services span {
+      display: block;
+      color: #374151;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-services h2 {
+      margin: 2px 0 18px;
+      color: #f97316;
+      font-size: 28px;
+      line-height: 1;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .hero-services ul {
+      margin: 0 0 22px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .hero-services li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: #374151;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .hero-services li::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #f97316;
+    }
+
+    .hero-services strong {
+      display: block;
+      color: #111827;
+      font-size: 18px;
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+
+    section {
+      padding: 92px 0;
+    }
+
+    .section-soft {
+      background: #f9fafb;
+    }
+
+    .section-title {
+      margin-bottom: 38px;
+    }
+
+    .section-title span {
+      color: #155eef;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+    }
+
+    .section-title h2 {
+      color: #111827;
+      font-size: clamp(30px, 3.4vw, 44px);
+      line-height: 1.15;
+      font-weight: 800;
+    }
+
+    .service-card,
+    .price-card,
+    .work-card,
+    .contact-card,
+    .proof-item {
+      border-color: #e5e7eb;
+      border-radius: 6px;
+      box-shadow: none;
+    }
+
+    .service-card,
+    .price-card,
+    .contact-card {
+      padding: 30px;
+    }
+
+    .service-card:hover,
+    .price-card:hover,
+    .work-card:hover {
+      border-color: #cfd6df;
+    }
+
+    .service-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 6px;
+      color: #111827;
+      background: #f3f4f6;
+      font-size: 18px;
+    }
+
+    .service-card h3,
+    .work-card h3,
+    .process-step h3 {
+      color: #111827;
+      font-size: 18px;
+      font-weight: 750;
+    }
+
+    .included-list li {
+      color: #4b5563;
+      font-size: 14px;
+    }
+
+    .included-list li::before {
+      color: #155eef;
+    }
+
+    .about-image {
+      border-radius: 6px;
+      filter: saturate(0.78);
+    }
+
+    .proof-grid {
+      gap: 12px;
+    }
+
+    .proof-item {
+      background: #ffffff;
+      padding: 18px;
+    }
+
+    .proof-item strong {
+      color: #111827;
+      font-size: 20px;
+    }
+
+    .work-card img {
+      height: 220px;
+      filter: saturate(0.8);
+    }
+
+    .work-card .body {
+      padding: 24px;
+    }
+
+    .tag-row span {
+      border-radius: 6px;
+      background: #f3f4f6;
+      color: #374151;
+      font-size: 11px;
+    }
+
+    #portfolio .work-card img {
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .price-card.featured {
+      border-color: #111827;
+      box-shadow: none;
+    }
+
+    .price-label {
+      border-radius: 6px;
+      background: #f3f4f6;
+      color: #111827;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+    }
+
+    .price-card h3 {
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    .price {
+      color: #111827;
+      font-size: 39px;
+    }
+
+    .price small {
+      color: #6b7280;
+    }
+
+    .market-note {
+      border-radius: 6px;
+      border-color: #dbe3ec;
+      background: #ffffff;
+      color: #4b5563;
+    }
+
+    .step-number {
+      border-radius: 6px;
+      background: #111827;
+    }
+
+    .contact-section {
+      background: #111827;
+    }
+
+    .contact-section .section-title span {
+      color: #93c5fd;
+    }
+
+    .contact-section .section-title p {
+      color: #cbd5e1;
+    }
+
+    .contact-line {
+      color: #f9fafb;
+    }
+
+    .contact-line i {
+      border-radius: 6px;
+      color: #111827;
+      background: #ffffff;
+    }
+
+    .contact-card label {
+      display: block;
+      margin-bottom: 6px;
+      color: #374151;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .form-control,
+    .custom-select {
+      width: 100%;
+      border-radius: 6px;
+      border-color: #d1d5db;
+    }
+
+    .form-control:focus,
+    .custom-select:focus {
+      border-color: #111827;
+      box-shadow: none;
+    }
+
+    .site-footer {
+      padding: 26px 0;
+      background: #070a12;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      color: #c4cad4;
+    }
+
+    .site-footer p {
+      color: #98a2b3;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .site-footer .footer-brand-line {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .site-footer .footer-code-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 6px;
+      color: #60a5fa;
+      background: rgba(96, 165, 250, 0.12);
+      border: 1px solid rgba(96, 165, 250, 0.18);
+      font-size: 13px;
+    }
+
+    .site-footer .footer-name {
+      color: #ffffff;
+      font-weight: 800;
+    }
+
+    .site-footer .footer-role {
+      color: #60a5fa;
+      font-weight: 600;
+    }
+
+    .site-footer .footer-meta {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 14px;
+      color: #98a2b3;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .site-footer .footer-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .site-footer .footer-meta span + span::before {
+      content: "";
+      width: 1px;
+      height: 14px;
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .social-links a {
+      border-radius: 6px;
+      color: #111827;
+      background: #f3f4f6;
+    }
+
+    .social-links a:hover {
+      background: #111827;
+      color: #ffffff;
+    }
+
+    @media (max-width: 991px) {
+      .site-footer {
+        text-align: center;
+      }
+
+      .site-footer .footer-brand-line,
+      .site-footer .footer-meta {
+        justify-content: center;
+      }
+
+      .site-footer .footer-meta {
+        flex-wrap: wrap;
+        margin-top: 14px;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .hero {
+        min-height: auto;
+        aspect-ratio: auto;
+        padding: 76px 0 58px;
+        background:
+          linear-gradient(90deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.82)),
+          url("assets/images/hero-agency-banner.png") center / cover no-repeat;
+      }
+
+      .hero-metrics {
+        grid-template-columns: 1fr;
+        border-bottom: 0;
+      }
+
+      .metric,
+      .metric:nth-child(2),
+      .metric:last-child {
+        padding: 18px 0;
+        border-right: 0;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .hero-services {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
 
 <body>
-
-      <!--Inicio de Etiqueta de Google-->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8491491533858290"
-     crossorigin="anonymous"></script>
-<!--Fin de la etiqueta de google-->
-
-  <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div>
-  <!-- ***** Preloader End ***** -->
-
-  <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+  <header class="site-header">
     <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <nav class="main-nav">
-            <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo">
-              <img src="assets/images/logo01.png">
-            </a>
-            <!-- ***** Logo End ***** -->
-            <!-- ***** Menu Start ***** -->
-            <ul class="nav">
-              <li class="scroll-to-section"><a href="#top" class="active">Inicio</a></li>
-              <li class="scroll-to-section"><a href="#services">Servicios</a></li>
-              <li class="scroll-to-section"><a href="#about">Sobre</a></li>
-              <li class="scroll-to-section"><a href="#portfolio">Portafolio</a></li>
-              <li class="scroll-to-section"><a href="#video">Videos</a></li> 
-              <li class="scroll-to-section"><a href="#contact">Contactanos</a></li> 
-              <li class="scroll-to-section"><div class="main-red-button-hover"><a href="#contact">Contactanos</a></div></li> 
-            </ul>        
-            <a class='menu-trigger'>
-                <span>Menu</span>
-            </a>
-            <!-- ***** Menu End ***** -->
-          </nav>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#top" aria-label="Markingwebs inicio">
+          <img src="assets/images/logo01.png" alt="Markingwebs">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav ml-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">Sobre nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="#portfolio">Portafolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#pricing">Precios</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+            <li class="nav-item ml-lg-2"><a class="btn-brand" href="https://wa.me/17862550098" target="_blank" rel="noopener">WhatsApp</a></li>
+          </ul>
         </div>
-      </div>
+      </nav>
     </div>
   </header>
-  <!-- ***** Header Area End ***** -->
 
-  <div class="main-banner" id="top">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="row">
-            <div class="col-lg-6 align-self-center">
-              <div class="owl-carousel owl-banner">
-                <div class="item header-text">
-                  <h6>Bienvenidos a Markingweb</h6>
-                  <h2>Construimos <em>Tu sitio</em> Lo mejor en  <span>SEO</span>?</h2>
-                  <p>Este es un sitio el cual nos dedicamos a la creacion de sitios web y de diseños web.</p>
-                  <div class="down-buttons">
-                    <div class="main-blue-button-hover">
-                      <a href="#contact">Escribenos</a>
-                    </div>
-                    <div class="call-button">
-                      <a href="#"><i class="fa fa-phone"></i> 786-255-0098</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="item header-text">
-                  <h6>Solo Marketing Digital</h6>
-                  <h2>Consigue <em>las mejores ideas</em> para <span>tu sitio web</span></h2>
-                  <p>Tenemos los mejores planes para tu negocio. Los mejores Diseños web y los mejores precio para tu Empresa, llamanos o escribenos al whatsapp <strong><em>+1 786 255 0098</em></strong>.</p>
-                  <div class="down-buttons">
-                    <div class="main-blue-button-hover">
-                      <a href="#services">Nuestros Servicios</a>
-                    </div>
-                    <div class="call-button">
-                      <a href="#"><i class="fa fa-phone"></i> 786-255-0098</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="item header-text">
-                  <h6>Videos Tutoriales</h6>
-                  <h2>Mira <em>Nuestros Videos</em> para tus <span> projectos</span></h2>
-                  <p>porfavor <a rel="nofollow" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TVZ7WWEWV4T8J" target="_blank">support us</a> un poco a través de PayPal si esta plantilla HTML de marketing digital es útil para usted. Gracias.</p>
-                  <div class="down-buttons">
-                    <div class="main-blue-button-hover">
-                      <a href="#video">Ver Videos</a>
-                    </div>
-                    <div class="call-button">
-                      <a href="#"><i class="fa fa-phone"></i> 786-255-0098</a>
-                    </div>
-                  </div>
-                </div>
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <span class="eyebrow">Diseño web y marketing digital</span>
+            <h1>Digital marketing agency para negocios en crecimiento.</h1>
+            <p>Paginas web, SEO local, diseño grafico y marketing digital con una imagen profesional, seria y lista para convertir clientes en Estados Unidos.</p>
+            <div class="hero-actions">
+              <a class="btn-brand" href="#contact">Contact us</a>
+              <a class="btn-outline-brand" href="tel:+17862550098"><i class="fa fa-phone mr-2"></i> +1 786 255 0098</a>
+            </div>
+            <div class="hero-metrics">
+              <div class="metric">
+                <strong>7-14 dias</strong>
+                <span>Entrega estimada para una pagina informativa lista para publicar.</span>
+              </div>
+              <div class="metric">
+                <strong>Mobile first</strong>
+                <span>Diseno adaptable para celulares, tablets y escritorio.</span>
+              </div>
+              <div class="metric">
+                <strong>SEO base</strong>
+                <span>Estructura, velocidad, titulos y configuracion inicial incluidos.</span>
               </div>
             </div>
           </div>
+          <div class="col-lg-5 mt-5 mt-lg-0">
+            <aside class="hero-services">
+              <span>What we do</span>
+              <h2>Our services</h2>
+              <ul>
+                <li>Website design</li>
+                <li>SEO local</li>
+                <li>Graphic design</li>
+                <li>Social media</li>
+              </ul>
+              <strong>Have an idea or project?</strong>
+            </aside>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <div id="services" class="our-services section">
-    <div class="services-right-dec">
-      <img src="assets/images/services-right-dec.png" alt="">
-    </div>
-    <div class="container">
-      <div class="services-left-dec">
-        <img src="assets/images/services-left-dec.png" alt="">
-      </div>
-      <div class="row">
-        <div class="col-lg-6 offset-lg-3">
-          <div class="section-heading">
-            <h2>Nosotros <em>Provehemos</em> El mejor servicio con <span>Nuestras Herramientas</span></h2>
-            <span>Nuestros Servicios</span>
+    <section id="services">
+      <div class="container">
+        <div class="section-title center">
+          <span>Servicios</span>
+          <h2>Todo lo que necesita un negocio para verse profesional y generar confianza.</h2>
+          <p>El enfoque es simple: una web clara, mensajes que expliquen tu oferta, contacto facil y mejoras medibles para que las personas te encuentren.</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <article class="service-card">
+              <div class="service-icon"><i class="fa fa-laptop"></i></div>
+              <h3>Paginas web profesionales</h3>
+              <p>Sitios para restaurantes, servicios locales, tiendas, contratistas, marcas personales y pequenas empresas.</p>
+              <ul class="included-list">
+                <li>Diseno responsive</li>
+                <li>Secciones de servicios, precios y contacto</li>
+                <li>Formulario, WhatsApp y llamada directa</li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <article class="service-card">
+              <div class="service-icon"><i class="fa fa-search"></i></div>
+              <h3>SEO local y tecnico</h3>
+              <p>Optimizacion inicial para Google, estructura de contenido, velocidad y palabras clave enfocadas en tu ciudad o area.</p>
+              <ul class="included-list">
+                <li>Titulos y descripciones SEO</li>
+                <li>Configuracion de Google Business Profile</li>
+                <li>Reportes mensuales opcionales</li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <article class="service-card">
+              <div class="service-icon"><i class="fa fa-bullhorn"></i></div>
+              <h3>Marketing y redes sociales</h3>
+              <p>Contenido visual, publicaciones, anuncios y piezas para que la marca se vea activa y consistente.</p>
+              <ul class="included-list">
+                <li>Disenos para Instagram y Facebook</li>
+                <li>Landing pages para campanas</li>
+                <li>Gestion basica de anuncios</li>
+              </ul>
+            </article>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="owl-carousel owl-services">
-            <div class="item">
-              <h4>Aprende mas sobre nuestras guias en lineas</h4>
-              <div class="icon"><img src="assets/images/service-icon-01.png" alt=""></div>
-              <p>Siéntete libre de Preguntar Por los Precios</p>
-            </div>
-            <div class="item">
-              <h4>Desarrolle la mejor estrategia para los negocios</h4>
-              <div class="icon"><img src="assets/images/service-icon-02.png" alt=""></div>
-              <p>Conozca más sobre el tema en detalles</p>
-            </div>
-            <div class="item">
-              <h4>UI / UX Deiseño y Desarollo</h4>
-              <div class="icon"><img src="assets/images/service-icon-03.png" alt=""></div>
-              <p>Conozca más sobre el tema en detalles</p>
-            </div>
-            <div class="item">
-              <h4>Descubre &amp; Explora nuestro Tips en SEO </h4>
-              <div class="icon"><img src="assets/images/service-icon-04.png" alt=""></div>
-              <p>Siéntete libre de Preguntar Por los Precios</p>
-            </div>
-            <div class="item">
-              <h4>Optimización de sus sitios web para la velocidad</h4>
-              <div class="icon"><img src="assets/images/service-icon-01.png" alt=""></div>
-              <p>Conozca más sobre el tema en detalles</p>
-            </div>
-            <div class="item">
-              <h4>Mira las estrategias de Marketing Digital</h4>
-              <div class="icon"><img src="assets/images/service-icon-02.png" alt=""></div>
-              <p>Conozca más sobre el tema en detalless</p>
-            </div>
-            <div class="item">
-              <h4>Las mejores ideas para los contenidos sobre tu pagina</h4>
-              <div class="icon"><img src="assets/images/service-icon-03.png" alt=""></div>
-              <p>Siéntete libre de Preguntar Por los Precios</p>
-            </div>
-            <div class="item">
-              <h4>Optimización de sus sitios web para la velocidad</h4>
-              <div class="icon"><img src="assets/images/service-icon-04.png" alt=""></div>
-              <p>Conozca más sobre el tema en detalless</p>
-            </div>
-            <div class="item">
-              <h4>Accesibilidad para visualización móvil</h4>
-              <div class="icon"><img src="assets/images/service-icon-01.png" alt=""></div>
-              <p>Conozca más sobre el tema en detalless</p>
-            </div>
-            <div class="item">
-              <h4>Ideas de contenido para tu próximo proyecto</h4>
-              <div class="icon"><img src="assets/images/service-icon-02.png" alt=""></div>
-              <p>Siéntete libre de Preguntar Por los Precios</p>
-            </div>
-            <div class="item">
-              <h4>UI &amp; UX Diseñando &amp; DEsarrollando</h4>
-              <div class="icon"><img src="assets/images/service-icon-03.png" alt=""></div>
-              <p>Conozca más sobre el tema en detalless</p>
-            </div>
-            <div class="item">
-              <h4>Descubre la tendencia del marketing digital</h4>
-              <div class="icon"><img src="assets/images/service-icon-04.png" alt=""></div>
-              <p>Conozca más sobre el tema en detalless</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    </section>
 
-  <div id="about" class="about-us section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 align-self-center">
-          <div class="left-image">
-            <img src="../assets/images/social media 02.png" alt="Two Girls working together">
+    <section id="about" class="section-soft">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="about-image">
+              <img src="assets/images/markingwebs-agency-dark.png" alt="Markingwebs digital marketing agency">
+            </div>
           </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="section-heading">
-            <h2>Haz crecer tu sitio web con nuestra <em>SEO Tools</em> &amp; <span>Proyectos</span> Gestión</h2>
-            <p>Puede Revisar los Precios de los Servicios que te Ofrecemos para tu Empresa o Negocio.</p>
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="fact-item">
-                  <div class="count-area-content">
-                    <div class="icon">
-                      <img src="assets/images/service-icon-01.png" alt="">
-                    </div>
-                    <div class="count-digit">320</div>
-                    <div class="count-title">Proyectos de SEO.</div>
-                    <p>Proyectos de Marketing Digital.</p>
-                  </div>
-                </div>
+          <div class="col-lg-6">
+            <div class="section-title">
+              <span>Sobre Markingwebs</span>
+              <h2>Diseno, desarrollo y marketing con lenguaje claro para pequenos negocios.</h2>
+              <p>Markingwebs trabaja con negocios que necesitan verse serios, explicar mejor sus servicios y recibir mensajes de clientes sin complicaciones tecnicas.</p>
+            </div>
+            <div class="proof-grid">
+              <div class="proof-item">
+                <strong>Web + SEO</strong>
+                <span>Base tecnica pensada para que Google entienda tu pagina.</span>
               </div>
-              <div class="col-lg-4">
-                <div class="fact-item">
-                  <div class="count-area-content">
-                    <div class="icon">
-                      <img src="assets/images/service-icon-02.png" alt="">
-                    </div>
-                    <div class="count-digit">640</div>
-                    <div class="count-title">Sitios Web</div>
-                    <p>Creacion de Paginas Web o Mantenimiento de Pagina Web.</p>
-                  </div>
-                </div>
+              <div class="proof-item">
+                <strong>USA pricing</strong>
+                <span>Paquetes en dolares con alcance claro y opciones mensuales.</span>
               </div>
-              <div class="col-lg-4">
-                <div class="fact-item">
-                  <div class="count-area-content">
-                    <div class="icon">
-                      <img src="assets/images/service-icon-03.png" alt="">
-                    </div>
-                    <div class="count-digit">120</div>
-                    <div class="count-title">Diseño Grafico</div>
-                    <p>Proyecto de Diseño Grafico Para tu Pagina web.</p>
-                  </div>
-                </div>
+              <div class="proof-item">
+                <strong>Contacto rapido</strong>
+                <span>WhatsApp, telefono, email y formulario en una sola pagina.</span>
+              </div>
+              <div class="proof-item">
+                <strong>Entrega guiada</strong>
+                <span>Te ayudamos a ordenar textos, imagenes y servicios.</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <div id="portfolio" class="our-portfolio section">
-    <div class="portfolio-left-dec">
-      <img src="assets/images/portfolio-left-dec.png" alt="">
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 offset-lg-3">
-          <div class="section-heading">
-            <h2>Nuestra reciente <em>Proyectos</em> &amp; Estudios de caso <span>Para Clientes</span></h2>
-            <span>Nuestro Portafolio</span>
+    <section id="portfolio">
+      <div class="container">
+        <div class="section-title center">
+          <span>Portafolio</span>
+          <h2>Ejemplos de estilos que podemos adaptar a tu negocio.</h2>
+          <p>Cada proyecto puede ajustarse por industria: servicios locales, comercio, restaurantes, salud, belleza, construccion o marcas personales.</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <article class="work-card">
+              <img src="assets/images/portfolio/restaurant-dashboard.png" alt="Restaurant Ordering & Admin Dashboard System">
+              <div class="body">
+                <h3>Restaurant Ordering &amp; Admin Dashboard System</h3>
+                <p>Sistema completo para restaurantes con pedidos online, reservas, panel administrativo, menu digital, control de ordenes y vista para cocina.</p>
+                <div class="tag-row"><span>Restaurant system</span><span>Admin panel</span><span>Desde $1,200 USD</span></div>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <article class="work-card">
+              <img src="assets/images/portfolio/modern-website-branding.png" alt="Modern Website Design & Branding">
+              <div class="body">
+                <h3>Modern Website Design &amp; Branding</h3>
+                <p>Diseno web moderno con identidad visual profesional, branding, landing pages, contenido visual y presencia digital para negocios.</p>
+                <div class="tag-row"><span>Website</span><span>Branding</span><span>Desde $650 USD</span></div>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <article class="work-card">
+              <img src="assets/images/portfolio/social-media-design.png" alt="Social Media Design Package">
+              <div class="body">
+                <h3>Social Media Design Package</h3>
+                <p>Disenos profesionales para redes sociales, anuncios, promociones y contenido visual para Instagram, Facebook y campanas digitales.</p>
+                <div class="tag-row"><span>Social media</span><span>Ads</span><span>Desde $150 USD</span></div>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <article class="work-card">
+              <img src="assets/images/portfolio/sakura-asian-kitchen.png" alt="Sakura Asian Kitchen Flyer">
+              <div class="body">
+                <h3>Sakura Asian Kitchen Flyer</h3>
+                <p>Flyer promocional premium para restaurante asiatico, ideal para redes sociales, campanas locales, delivery y promociones de comida.</p>
+                <div class="tag-row"><span>Restaurant flyer</span><span>Delivery</span><span>Desde $85 USD</span></div>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <article class="work-card">
+              <img src="assets/images/portfolio/italian-restaurant-flyer.png" alt="Italian Restaurant Flyer">
+              <div class="body">
+                <h3>Italian Restaurant Flyer</h3>
+                <p>Diseno promocional para restaurante italiano con estilo elegante, menu destacado, descuento, delivery e informacion de contacto.</p>
+                <div class="tag-row"><span>Food promo</span><span>Menu design</span><span>Desde $85 USD</span></div>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <article class="work-card">
+              <img src="assets/images/portfolio/burger-restaurant-flyer.png" alt="Burger Restaurant Flyer">
+              <div class="body">
+                <h3>Burger Restaurant Flyer</h3>
+                <p>Flyer moderno para restaurante de hamburguesas, ideal para promocionar combos, descuentos, delivery y menu principal.</p>
+                <div class="tag-row"><span>Burger promo</span><span>Food flyer</span><span>Desde $85 USD</span></div>
+              </div>
+            </article>
           </div>
         </div>
       </div>
-    </div>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="owl-carousel owl-portfolio">
-            <div class="item">
-              <div class="thumb">
-                <img src="assets/images/1.png" alt="">
-                <div class="hover-effect">
-                  <div class="inner-content">
-                    <a rel="sponsored" href="https://templatemo.com/tm-564-plot-listing" target="_parent"><h4>Primer Proyecto</h4></a>
-                    <span>Listado de parcelas</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="thumb">
-                <img src="assets/images/2.png" alt="">
-                <div class="hover-effect">
-                  <div class="inner-content">
-                    <a href="#"><h4>Proyecto Dos</h4></a>
-                    <span>SEO &amp; Marketing</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="thumb">
-                <img src="assets/images/3.png" alt="">
-                <div class="hover-effect">
-                  <div class="inner-content">
-                    <a rel="sponsored" href="https://templatemo.com/tm-562-space-dynamic" target="_parent"><h4>Tercer Proyecto</h4></a>
-                    <span>Espacio Dinámico SEO</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="thumb">
-                <img src="assets/images/4.png" alt="">
-                <div class="hover-effect">
-                  <div class="inner-content">
-                    <a href="#"><h4>Cuarto Proyecto</h4></a>
-                    <span>Sitios Web de Marketing</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="thumb">
-                <img src="assets/images/5.png" alt="">
-                <div class="hover-effect">
-                  <div class="inner-content">
-                    <a href="#"><h4>Quinto Proyect</h4></a>
-                    <span>Recursos digitales</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="thumb">
-                <img src="assets/images/6.png" alt="">
-                <div class="hover-effect">
-                  <div class="inner-content">
-                    <a href="#"><h4>Sexto Proyecto</h4></a>
-                    <span>SEO &amp; Marketing</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="thumb">
-                <img src="assets/images/7.png" alt="">
-                <div class="hover-effect">
-                  <div class="inner-content">
-                    <a href="#"><h4>Sextimo Proyecto</h4></a>
-                    <span>SEO &amp; Marketing</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="thumb">
-                <img src="assets/images/8.png" alt="">
-                <div class="hover-effect">
-                  <div class="inner-content">
-                    <a href="#"><h4>Octavo Proyecto</h4></a>
-                    <span>SEO &amp; Marketing</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="thumb">
-                <img src="assets/images/1.png" alt="">
-                <div class="hover-effect">
-                  <div class="inner-content">
-                    <a href="#"><h4>Noveno Proyecto</h4></a>
-                    <span>SEO &amp; Marketing</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="thumb">
-                <img src="assets/images/2.png" alt="">
-                <div class="hover-effect">
-                  <div class="inner-content">
-                    <a href="#"><h4>Decimo Proyecto</h4></a>
-                    <span>SEO &amp; Marketing</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="thumb">
-                <img src="assets/images/3.png" alt="">
-                <div class="hover-effect">
-                  <div class="inner-content">
-                    <a href="#"><h4>Proyecto Onceavo</h4></a>
-                    <span>SEO &amp; Marketing</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="thumb">
-                <img src="assets/images/4.png" alt="">
-                <div class="hover-effect">
-                  <div class="inner-content">
-                    <a href="#"><h4>Doceavo Proyecto</h4></a>
-                    <span>SEO &amp; Marketing</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    </section>
 
-  <div id="pricing" class="pricing-tables">
-    <div class="tables-left-dec">
-      <img src="assets/images/tables-left-dec.png" alt="">
-    </div>
-    <div class="tables-right-dec">
-      <img src="assets/images/tables-right-dec.png" alt="">
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 offset-lg-3">
-          <div class="section-heading">
-            <h2>Seleccione un adecuado <em>plan</em> para tus siguientes <span>proyectos</span></h2>
-            <span>Nuestros planes</span>
+    <section id="pricing" class="section-soft">
+      <div class="container">
+        <div class="section-title center">
+          <span>Precios en Estados Unidos</span>
+          <h2>Planes claros para empezar, crecer o vender online.</h2>
+          <p>Los precios son referencias competitivas para pequenos negocios en USA. El precio final depende de paginas, contenido, funciones y rapidez de entrega.</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <article class="price-card">
+              <span class="price-label">Pagina inicial</span>
+              <h3>Landing profesional</h3>
+              <div class="price">$799 <small>desde</small></div>
+              <p class="price-note">Ideal para presentar un servicio, promocion o negocio nuevo.</p>
+              <ul class="included-list">
+                <li>1 pagina con hasta 6 secciones</li>
+                <li>Diseno responsive</li>
+                <li>Formulario, telefono y WhatsApp</li>
+                <li>SEO basico y carga rapida</li>
+              </ul>
+              <a class="btn-outline-brand mt-4 w-100" href="#contact">Solicitar cotizacion</a>
+            </article>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <article class="price-card featured">
+              <span class="price-label">Mas recomendado</span>
+              <h3>Sitio para negocio</h3>
+              <div class="price">$1,499 <small>desde</small></div>
+              <p class="price-note">Para empresas que necesitan explicar servicios y verse confiables.</p>
+              <ul class="included-list">
+                <li>Hasta 5 paginas o secciones completas</li>
+                <li>Contenido guiado y llamadas a la accion</li>
+                <li>SEO local inicial</li>
+                <li>Integracion con Google Maps y redes</li>
+              </ul>
+              <a class="btn-brand mt-4 w-100" href="https://wa.me/17862550098" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+            </article>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <article class="price-card">
+              <span class="price-label">Crecimiento</span>
+              <h3>Ecommerce o SEO mensual</h3>
+              <div class="price">$2,499 <small>desde</small></div>
+              <p class="price-note">Para vender productos o trabajar posicionamiento y marketing de forma continua.</p>
+              <ul class="included-list">
+                <li>Tienda online desde $2,499</li>
+                <li>SEO mensual desde $650/mes</li>
+                <li>Redes sociales desde $450/mes</li>
+                <li>Mantenimiento desde $120/mes</li>
+              </ul>
+              <a class="btn-outline-brand mt-4 w-100" href="#contact">Pedir plan a medida</a>
+            </article>
           </div>
         </div>
+        <p class="market-note">Referencia de mercado USA 2026: una web profesional para pequena empresa suele moverse entre $1,500 y $15,000; SEO profesional para pequenas empresas suele empezar alrededor de $1,500/mes en agencias grandes. Markingwebs ofrece paquetes de entrada mas accesibles para negocios que estan comenzando o quieren mejorar su presencia actual.</p>
       </div>
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="item first-item">
-            <h4>Comienza un plan</h4>
-            <em>$160/mo</em>
-            <span>$140</span>
-            <ul>
-              <li>10 Proyectos</li>
-              <li>100 GB espacio</li>
-              <li>20 SEO chequeos</li>
-              <li>Soporte básico</li>
-            </ul>
-            <div class="main-blue-button-hover">
-              <a href="#">Comienza</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="item second-item">
-            <h4>Comienza un plan</h4>
-            <em>$240/mo</em>
-            <span>$200</span>
-            <ul>
-              <li>20 Proyectos</li>
-              <li>200 GB espacio</li>
-              <li>50 SEO chequeos</li>
-              <li>Soporte Profesional</li>
-            </ul>
-            <div class="main-blue-button-hover">
-              <a href="#">Consiguelo ahora</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="item third-item">
-            <h4>Plan Avanzado</h4>
-            <em>$360/mo</em>
-            <span>$280</span>
-            <ul>
-              <li>30 Proyectos</li>
-              <li>300 GB espacio</li>
-              <li>Mejor Soporte</li>
-            </ul>
-            <div class="main-blue-button-hover">
-              <a href="#">Compra Ahora</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    </section>
 
-  <div id="subscribe" class="subscribe">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="inner-content">
-            <div class="row">
-              <div class="col-lg-10 offset-lg-1">
-                <h2>Conozca la puntuación SEO de su sitio web por correo electrónico</h2>
-                <form id="subscribe" action="" method="get">
-                  <input type="text" name="website" id="website" placeholder="Your Website URL" required="">
-                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
-                  <button type="submit" id="form-submit" class="main-button ">Subscribe</button>
-                </form>
+    <section id="process">
+      <div class="container">
+        <div class="row align-items-start">
+          <div class="col-lg-5 mb-4 mb-lg-0">
+            <div class="section-title">
+              <span>Proceso</span>
+              <h2>Una forma ordenada de pasar de idea a pagina publicada.</h2>
+              <p>Te acompano a definir lo importante primero: que vendes, a quien atiendes, como te contactan y que debe decir la pagina para que el cliente avance.</p>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <div>
+                <h3>Diagnostico y objetivo</h3>
+                <p>Revisamos tu negocio, tu competencia, tus servicios y el tipo de cliente que quieres atraer.</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <div>
+                <h3>Diseno y contenido</h3>
+                <p>Organizamos textos, imagenes, estructura, llamados a la accion y secciones de confianza.</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <div>
+                <h3>Publicacion y mejoras</h3>
+                <p>Publicamos la pagina, conectamos medios de contacto y dejamos una base lista para SEO y marketing.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <div id="video" class="our-videos section">
-    <div class="videos-left-dec">
-      <img src="assets/images/videos-left-dec.png" alt="">
-    </div>
-    <div class="videos-right-dec">
-      <img src="assets/images/videos-right-dec.png" alt="">
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="naccs">
-            <div class="grid">
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5 mb-4 mb-lg-0">
+            <div class="section-title">
+              <span>Contacto</span>
+              <h2>Cuéntame qué negocio tienes y qué quieres lograr.</h2>
+              <p>Te respondo con una recomendacion clara del plan que mas conviene, el precio estimado y los proximos pasos.</p>
+            </div>
+            <div class="contact-line">
+              <i class="fa fa-phone"></i>
+              <a href="tel:+17862550098">+1 786 255 0098</a>
+            </div>
+            <div class="contact-line">
+              <i class="fa fa-envelope"></i>
+              <a href="mailto:megaempresa.02@gmail.com">megaempresa.02@gmail.com</a>
+            </div>
+            <div class="contact-line">
+              <i class="fa fa-map-marker"></i>
+              <span>Servicios remotos para negocios en Estados Unidos</span>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <form class="contact-card" action="envia.php" method="post">
               <div class="row">
-                <div class="col-lg-8">
-                  <ul class="nacc">
-                    <li class="active">
-                      <div>
-                        <div class="thumb">
-                          <iframe width="100%" height="auto" src="https://www.youtube.com/embed/JynGuQx4a1Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                          <div class="overlay-effect">
-                            <a href="#"><h4>Proyecto Uno</h4></a>
-                            <span>SEO &amp; Marketing</span>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <div class="thumb">
-                          <iframe width="100%" height="auto" src="https://www.youtube.com/embed/RdJBSFpcO4M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                          <div class="overlay-effect">
-                            <a href="#"><h4>Proyecto Dos</h4></a>
-                            <span>Publicidad &amp; Marketing</span>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <div class="thumb">
-                          <iframe width="100%" height="auto" src="https://www.youtube.com/embed/ZlfAjbQiL78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                          <div class="overlay-effect">
-                            <a href="#"><h4>Proyecto Tres</h4></a>
-                            <span>Digital &amp; Marketing</span>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <div class="thumb">
-                          <iframe width="100%" height="auto" src="https://www.youtube.com/embed/mx1WseE7-0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                          <div class="overlay-effect">
-                            <a href="#"><h4>Proyecto Cuatro</h4></a>
-                            <span>SEO &amp;Publicidad</span>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
+                <div class="col-md-6 mb-3">
+                  <label for="nombre">Nombre</label>
+                  <input class="form-control" type="text" name="nombre" id="nombre" required>
                 </div>
-                <div class="col-lg-4">
-                  <div class="menu">
-                    <div class="active">
-                      <div class="thumb">
-                        <img src="assets/images/video-thumb-01.png" alt="">
-                        <div class="inner-content">
-                          <h4>Proyecto Uno</h4>
-                          <span>SEO &amp; Marketing</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="thumb">
-                        <img src="assets/images/video-thumb-02.png" alt="">
-                        <div class="inner-content">
-                          <h4>Proyecto Dos</h4>
-                          <span>Publicidad &amp; Marketing</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="thumb">
-                        <img src="assets/images/video-thumb-03.png" alt="Marketing">
-                        <div class="inner-content">
-                          <h4>Proyecto Tres</h4>
-                          <span>Digital &amp; Marketing</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="thumb">
-                        <img src="assets/images/video-thumb-04.png" alt="SEO Work">
-                        <div class="inner-content">
-                          <h4>Proyecto Cuato</h4>
-                          <span>SEO &amp; Publicidad</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>             
+                <div class="col-md-6 mb-3">
+                  <label for="telefono">Telefono</label>
+                  <input class="form-control" type="tel" name="telefono" id="telefono" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="correo">Correo</label>
+                  <input class="form-control" type="email" name="correo" id="correo" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="servicio">Servicio</label>
+                  <select class="custom-select" name="servicio" id="servicio" required>
+                    <option value="">Selecciona una opcion</option>
+                    <option value="Landing profesional">Landing profesional</option>
+                    <option value="Sitio para negocio">Sitio para negocio</option>
+                    <option value="Ecommerce">Ecommerce</option>
+                    <option value="SEO o redes sociales">SEO o redes sociales</option>
+                  </select>
+                </div>
+                <div class="col-12 mb-3">
+                  <label for="mensaje">Mensaje</label>
+                  <textarea class="form-control" name="mensaje" id="mensaje" placeholder="Ejemplo: necesito una pagina para mi negocio de limpieza en Miami..." required></textarea>
+                </div>
+                <div class="col-12">
+                  <button class="btn-brand border-0 w-100" type="submit">Enviar solicitud</button>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="contact" class="contact-us section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-7">
-          <div class="section-heading">
-            <h2>No dudes en <em>Contactarnos</em>A Nosotros a través del <span>HTML Formulario</span></h2>
-            <div id="map">
-              <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="360px" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-            </div>
-            <div class="info">
-              <span><i class="fa fa-phone"></i> <a href="#">786-255-0098</a></span>
-              <span><i class="fa fa-envelope"></i> <a href="#">megaempresa.02@gmail.com</a></span>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-5 align-self-center">
-            
-            
-                     
-            
-            
-            
-            
-            
-            
-            
-            
-              
-            
-            
-            
-            
-            
-            
-            
-            
-            
-        </div>
-      </div>
-    </div>
-    <div class="contact-dec">
-      <img src="assets/images/contact-dec.png" alt="">
-    </div>
-    <div class="contact-left-dec">
-      <img src="assets/images/contact-left-dec.png" alt="">
-    </div>
-  </div>
-
-  <div class="footer-dec">
-    <img src="assets/images/footer-dec.png" alt="">
-  </div>
-
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="about footer-item">
-            <div class="logo">
-              <a href="#"><img src="assets/images/logo sin fondo.png" alt="Onix Digital TemplateMo"></a>
-            </div>
-            <a href="#">Markingwebs.com</a>
-            <ul>
-              <li><a href="https://www.facebook.com/Markingweb-107317911945666"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="https://twitter.com/5b7d0fa18b7c485"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="https://www.behance.net/gallery/144489297/Diseno-para-Redes-Sociales-y-Mas"><i class="fa fa-behance"></i></a></li>
-              <li><a href="https://www.instagram.com/p/CdXbqtlO_FX/?utm_source=ig_web_copy_link"><i class="fa fa-instagram"></i></a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="services footer-item">
-            <h4>Servicios</h4>
-            <ul>
-              <li><a href="#">Desarrollo de SEO</a></li>
-              <li><a href="#">El crecimiento del Negocio</a></li>
-              <li><a href="#">Gestión de redes sociales</a></li>
-              <li><a href="#">Optimización del sitio web</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="community footer-item">
-            <h4>Comunidad</h4>
-            <ul>
-              <li><a href="#">Marketing Digital</a></li>
-              <li><a href="#">Ideas para Negocios</a></li>
-              <li><a href="#">Comprobación del sitio web</a></li>
-              <li><a href="#">Prueba de velocidad de página</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="subscribe-newsletters footer-item">
-            <h4>Suscríbete a Boletines</h4>
-            <p>Reciba nuestras últimas noticias e ideas en su bandeja de entrada</p>
-            <form action="#" method="get">
-              <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
-              <button type="submit" id="form-submit" class="main-button "><i class="fa fa-paper-plane-o"></i></button>
             </form>
           </div>
         </div>
-        <div class="col-lg-12">
-          <div class="copyright">
-            <p>Copyright © 2021 Marketingwebs., Ltd. Todos los derechos reservados. 
-              <!--
-            <br>
-            Designed by <a rel="nofollow" href="https://templatemo.com" title="free CSS templates">TemplateMo</a><br>
-            Distributed by <a href="https://themewagon.com">Themewagon</a>
-          </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7 mb-3 mb-lg-0">
+          <div class="footer-brand-line">
+            <span class="footer-code-icon"><i class="fa fa-code"></i></span>
+            <span>Desarrollado por <span class="footer-name">Michael Alexander Perez</span></span>
+          </div>
+          <p class="mb-0"><span class="footer-role">Full Stack Developer · UX/UI · Web Systems</span></p>
+          <p class="mb-0">Professional Website Design · Branding · Digital Solutions</p>
+        </div>
+        <div class="col-lg-5">
+          <div class="footer-meta">
+            <span>Portfolio Website</span>
+            <span>API-ready</span>
+            <span>Responsive Design</span>
           </div>
         </div>
-              -->
+      </div>
+      <div class="row mt-3 pt-3" style="border-top: 1px solid rgba(255, 255, 255, 0.08);">
+        <div class="col-12">
+          <p class="mb-0">&copy; 2026 Markingwebs. Todos los derechos reservados.</p>
+        </div>
       </div>
     </div>
   </footer>
-  
-<!-- Código de instalación Cliengo para Markingweb --> <script type="text/javascript">(function () { var ldk = document.createElement('script'); ldk.type = 'text/javascript'; ldk.async = true; ldk.src = 'https://s.cliengo.com/weboptimizer/6247dc095bb7a8002a7fc382/6247dc0b5bb7a8002a7fc385.js?platform=view_installation_code'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ldk, s); })();</script>
 
-
-  <!-- Scripts -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/animation.js"></script>
-  <script src="assets/js/imagesloaded.js"></script>
-  <script src="assets/js/custom.js"></script>
-
-  <script>
-  // Acc
-    $(document).on("click", ".naccs .menu div", function() {
-      var numberIndex = $(this).index();
-
-      if (!$(this).is("active")) {
-          $(".naccs .menu div").removeClass("active");
-          $(".naccs ul li").removeClass("active");
-
-          $(this).addClass("active");
-          $(".naccs ul").find("li:eq(" + numberIndex + ")").addClass("active");
-
-          var listItemHeight = $(".naccs ul")
-            .find("li:eq(" + numberIndex + ")")
-            .innerHeight();
-          $(".naccs ul").height(listItemHeight + "px");
-        }
-    });
-  </script>
 </body>
 </html>

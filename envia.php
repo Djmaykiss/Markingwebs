@@ -1,7 +1,7 @@
 ﻿<?php
-$remitente = $_POST['email'];
-$destinatario = 'tucorreo@ejemplo.com'; // en esta línea va el mail del destinatario.
-$asunto = 'Asunto de ejemplo'; // acá se puede modificar el asunto del mail
+$remitente = $_POST['correo'];
+$destinatario = 'megaempresa.02@gmail.com';
+$asunto = 'Nueva solicitud desde Markingwebs';
 if (!$_POST){
 ?>
 
@@ -11,6 +11,7 @@ if (!$_POST){
     $cuerpo = "Nombre y apellido: " . $_POST["nombre"] . "\r\n"; 
     $cuerpo .= "Teléfono: " . $_POST["telefono"] . "\r\n";
     $cuerpo .= "Correo: " . $_POST["correo"] . "\r\n";
+    $cuerpo .= "Servicio: " . $_POST["servicio"] . "\r\n";
     $cuerpo .= "Mensaje: " . $_POST["mensaje"] . "\r\n";
     
 	//las líneas de arriba definen el contenido del mail. Las palabras que están dentro de $_POST[""] deben coincidir con el "name" de cada campo. 
@@ -21,7 +22,7 @@ if (!$_POST){
     $headers .= "X-Priority: 3\n";
     $headers .= "X-MSMail-Priority: Normal\n";
     $headers .= "X-Mailer: php\n";
-    $headers .= "From: \"".$_POST['nombre']." ".$_POST['apellido']."\" <".$remitente.">\n";
+    $headers .= "From: \"".$_POST['nombre']."\" <".$remitente.">\n";
 
     mail($destinatario, $asunto, $cuerpo, $headers);
     
