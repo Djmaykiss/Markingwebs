@@ -1,21 +1,21 @@
 ﻿<?php
 $remitente = $_POST['correo'];
 $destinatario = 'megaempresa.02@gmail.com';
-$asunto = 'Nueva solicitud desde Markingwebs';
+$asunto = 'New request from Markingwebs';
 if (!$_POST){
 ?>
 
 <?php
 }else{
 	 
-    $cuerpo = "Nombre y apellido: " . $_POST["nombre"] . "\r\n"; 
-    $cuerpo .= "Teléfono: " . $_POST["telefono"] . "\r\n";
-    $cuerpo .= "Correo: " . $_POST["correo"] . "\r\n";
-    $cuerpo .= "Servicio: " . $_POST["servicio"] . "\r\n";
-    $cuerpo .= "Mensaje: " . $_POST["mensaje"] . "\r\n";
+    $cuerpo = "Name: " . $_POST["nombre"] . "\r\n"; 
+    $cuerpo .= "Phone: " . $_POST["telefono"] . "\r\n";
+    $cuerpo .= "Email: " . $_POST["correo"] . "\r\n";
+    $cuerpo .= "Service: " . $_POST["servicio"] . "\r\n";
+    $cuerpo .= "Message: " . $_POST["mensaje"] . "\r\n";
     
-	//las líneas de arriba definen el contenido del mail. Las palabras que están dentro de $_POST[""] deben coincidir con el "name" de cada campo. 
-	// Si se agrega un campo al formulario, hay que agregarlo acá.
+	// The lines above define the email content. The keys inside $_POST[""] must match each field's name attribute.
+	// If a new form field is added, include it here.
 
     $headers  = "MIME-Version: 1.0\n";
     $headers .= "Content-type: text/plain; charset=utf-8\n";
@@ -26,6 +26,6 @@ if (!$_POST){
 
     mail($destinatario, $asunto, $cuerpo, $headers);
     
-    include 'index.html'; //se debe crear un html que confirma el envío
+    include 'index.html'; // Replace with a confirmation page if needed.
 }
 ?>

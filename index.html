@@ -1,15 +1,15 @@
 ﻿<!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Markingwebs crea paginas web, SEO, redes sociales y publicidad digital para negocios en Estados Unidos.">
+  <meta name="description" content="Markingwebs builds professional websites, branding, SEO, social media and digital solutions for businesses in the United States.">
   <meta name="author" content="Markingwebs">
   <meta name="google-site-verification" content="7I3oPHNvRcxTSHs4aytQ3HA1bIXIluScVGWBmXFgr-Q">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="assets/images/logo01.png" type="image/x-icon">
-  <title>Markingwebs | Paginas web, SEO y marketing digital</title>
+  <title>Markingwebs | Professional Web Design, Branding & Digital Marketing</title>
 
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/fontawesome.css">
@@ -1186,7 +1186,7 @@
     }
 
     #pricing .price-card.featured::before {
-      content: "Más vendido";
+      content: "Most Popular";
       position: absolute;
       top: 18px;
       right: -42px;
@@ -1315,6 +1315,64 @@
       font-weight: 600;
     }
 
+    .premium-stats-section {
+      padding: 82px 0;
+      background: #ffffff;
+      border-top: 1px solid #eef0f3;
+      border-bottom: 1px solid #eef0f3;
+    }
+
+    .premium-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .premium-stat-card {
+      padding: 26px 22px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      background: #ffffff;
+      box-shadow: 0 18px 46px rgba(17, 24, 39, 0.06);
+      text-align: center;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+    }
+
+    .premium-stat-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(249, 115, 22, 0.34);
+      box-shadow: 0 26px 64px rgba(17, 24, 39, 0.1);
+    }
+
+    .premium-stat-icon {
+      width: 46px;
+      height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      border-radius: 8px;
+      color: #f97316;
+      background: #fff3e8;
+      font-size: 19px;
+    }
+
+    .premium-stat-number {
+      display: block;
+      color: #111827;
+      font-size: 34px;
+      line-height: 1;
+      font-weight: 800;
+    }
+
+    .premium-stat-card p {
+      margin: 9px 0 0;
+      color: #667085;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
     .testimonial-card {
       height: 100%;
       padding: 24px;
@@ -1425,6 +1483,14 @@
       }
 
       .trust-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .premium-stats-section {
+        padding: 64px 0;
+      }
+
+      .premium-stats-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -1669,19 +1735,19 @@
   <header class="site-header">
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#top" aria-label="Markingwebs inicio">
+        <a class="navbar-brand" href="#top" aria-label="Markingwebs home">
           <img src="assets/images/logo01.png" alt="Markingwebs">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Abrir menu">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Open menu">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="mainMenu">
           <ul class="navbar-nav ml-auto align-items-lg-center">
-            <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
-            <li class="nav-item"><a class="nav-link" href="#about">Sobre nosotros</a></li>
-            <li class="nav-item"><a class="nav-link" href="#portfolio">Portafolio</a></li>
-            <li class="nav-item"><a class="nav-link" href="#pricing">Precios</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             <li class="nav-item ml-lg-2"><a class="btn-brand" href="https://wa.me/17862550098" target="_blank" rel="noopener">WhatsApp</a></li>
           </ul>
         </div>
@@ -1694,25 +1760,25 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-7">
-            <span class="eyebrow">Diseño web y marketing digital</span>
-            <h1>Digital marketing agency para negocios en crecimiento.</h1>
-            <p>Paginas web, SEO local, diseño grafico y marketing digital con una imagen profesional, seria y lista para convertir clientes en Estados Unidos.</p>
+            <span class="eyebrow">Web Design & Digital Marketing</span>
+            <h1>Digital marketing agency for growing businesses.</h1>
+            <p>Professional websites, local SEO, branding and digital marketing built to help U.S. businesses look credible and convert more customers.</p>
             <div class="hero-actions">
-              <a class="btn-brand" href="#contact">Contact us</a>
+              <a class="btn-brand" href="#contact">Get Started</a>
               <a class="btn-outline-brand" href="tel:+17862550098"><i class="fa fa-phone mr-2"></i> +1 786 255 0098</a>
             </div>
             <div class="hero-metrics">
               <div class="metric">
                 <strong>7-14 dias</strong>
-                <span>Entrega estimada para una pagina informativa lista para publicar.</span>
+                <span>Estimated delivery for a polished business website ready to launch.</span>
               </div>
               <div class="metric">
                 <strong>Mobile first</strong>
-                <span>Diseno adaptable para celulares, tablets y escritorio.</span>
+                <span>Responsive design for mobile, tablet and desktop.</span>
               </div>
               <div class="metric">
-                <strong>SEO base</strong>
-                <span>Estructura, velocidad, titulos y configuracion inicial incluidos.</span>
+                <strong>SEO foundation</strong>
+                <span>Structure, speed, page titles and initial optimization included.</span>
               </div>
             </div>
           </div>
@@ -1722,9 +1788,9 @@
               <h2>Our services</h2>
               <ul>
                 <li>Website design</li>
-                <li>SEO local</li>
-                <li>Graphic design</li>
-                <li>Social media</li>
+                <li>Local SEO</li>
+                <li>Graphic Design</li>
+                <li>Social Media</li>
               </ul>
               <strong>Have an idea or project?</strong>
             </aside>
@@ -1736,44 +1802,44 @@
     <section id="services">
       <div class="container">
         <div class="section-title center">
-          <span>Servicios</span>
-          <h2>Todo lo que necesita un negocio para verse profesional y generar confianza.</h2>
-          <p>El enfoque es simple: una web clara, mensajes que expliquen tu oferta, contacto facil y mejoras medibles para que las personas te encuentren.</p>
+          <span>Services</span>
+          <h2>Everything a business needs to look professional and build trust online.</h2>
+          <p>The approach is simple: clear websites, strong messaging, easy contact options and measurable improvements that help customers find you.</p>
         </div>
         <div class="row">
           <div class="col-lg-4 mb-4">
             <article class="service-card">
               <div class="service-icon"><i class="fa fa-laptop"></i></div>
-              <h3>Paginas web profesionales</h3>
-              <p>Sitios para restaurantes, servicios locales, tiendas, contratistas, marcas personales y pequenas empresas.</p>
+              <h3>Professional Websites</h3>
+              <p>Websites for restaurants, local services, stores, contractors, personal brands and small businesses.</p>
               <ul class="included-list">
-                <li>Diseno responsive</li>
-                <li>Secciones de servicios, precios y contacto</li>
-                <li>Formulario, WhatsApp y llamada directa</li>
+                <li>Responsive design</li>
+                <li>Service, pricing and contact sections</li>
+                <li>Form, WhatsApp and direct call options</li>
               </ul>
             </article>
           </div>
           <div class="col-lg-4 mb-4">
             <article class="service-card">
               <div class="service-icon"><i class="fa fa-search"></i></div>
-              <h3>SEO local y tecnico</h3>
-              <p>Optimizacion inicial para Google, estructura de contenido, velocidad y palabras clave enfocadas en tu ciudad o area.</p>
+              <h3>Local & Technical SEO</h3>
+              <p>Initial Google optimization, content structure, speed improvements and location-focused keywords.</p>
               <ul class="included-list">
-                <li>Titulos y descripciones SEO</li>
-                <li>Configuracion de Google Business Profile</li>
-                <li>Reportes mensuales opcionales</li>
+                <li>SEO titles and descriptions</li>
+                <li>Google Business Profile setup</li>
+                <li>Optional monthly reports</li>
               </ul>
             </article>
           </div>
           <div class="col-lg-4 mb-4">
             <article class="service-card">
               <div class="service-icon"><i class="fa fa-bullhorn"></i></div>
-              <h3>Marketing y redes sociales</h3>
-              <p>Contenido visual, publicaciones, anuncios y piezas para que la marca se vea activa y consistente.</p>
+              <h3>Marketing & Social Media</h3>
+              <p>Visual content, posts, ads and campaign assets that keep your brand active and consistent.</p>
               <ul class="included-list">
-                <li>Disenos para Instagram y Facebook</li>
-                <li>Landing pages para campanas</li>
-                <li>Gestion basica de anuncios</li>
+                <li>Designs for Instagram and Facebook</li>
+                <li>Landing pages for campaigns</li>
+                <li>Basic ad management</li>
               </ul>
             </article>
           </div>
@@ -1791,26 +1857,26 @@
           </div>
           <div class="col-lg-6">
             <div class="section-title">
-              <span>Sobre Markingwebs</span>
-              <h2>Diseno, desarrollo y marketing con lenguaje claro para pequenos negocios.</h2>
-              <p>Markingwebs trabaja con negocios que necesitan verse serios, explicar mejor sus servicios y recibir mensajes de clientes sin complicaciones tecnicas.</p>
+              <span>About Markingwebs</span>
+              <h2>Design, development and marketing with clear strategy for small businesses.</h2>
+              <p>Markingwebs helps businesses look credible, explain their services clearly and receive customer inquiries without technical friction.</p>
             </div>
             <div class="proof-grid">
               <div class="proof-item">
                 <strong>Web + SEO</strong>
-                <span>Base tecnica pensada para que Google entienda tu pagina.</span>
+                <span>Technical structure designed to help Google understand your website.</span>
               </div>
               <div class="proof-item">
                 <strong>USA pricing</strong>
-                <span>Paquetes en dolares con alcance claro y opciones mensuales.</span>
+                <span>U.S. pricing with clear scope and monthly growth options.</span>
               </div>
               <div class="proof-item">
-                <strong>Contacto rapido</strong>
-                <span>WhatsApp, telefono, email y formulario en una sola pagina.</span>
+                <strong>Fast contact</strong>
+                <span>WhatsApp, phone, email and form options on one clear page.</span>
               </div>
               <div class="proof-item">
-                <strong>Entrega guiada</strong>
-                <span>Te ayudamos a ordenar textos, imagenes y servicios.</span>
+                <strong>Guided delivery</strong>
+                <span>We help organize your copy, visuals and service offer.</span>
               </div>
             </div>
           </div>
@@ -1821,9 +1887,9 @@
     <section id="portfolio">
       <div class="container">
         <div class="section-title center">
-          <span>Portafolio</span>
-          <h2>Ejemplos de estilos que podemos adaptar a tu negocio.</h2>
-          <p>Cada proyecto puede ajustarse por industria: servicios locales, comercio, restaurantes, salud, belleza, construccion o marcas personales.</p>
+          <span>Portfolio</span>
+          <h2>Portfolio work built for real business use cases.</h2>
+          <p>Each project can be tailored for local services, ecommerce, restaurants, healthcare, beauty, construction or personal brands.</p>
         </div>
         <div class="row">
           <div class="col-lg-4 mb-4">
@@ -1831,8 +1897,8 @@
               <img src="assets/images/portfolio/restaurant-dashboard.png" alt="Restaurant Ordering & Admin Dashboard System">
               <div class="body">
                 <h3>Restaurant Ordering &amp; Admin Dashboard System</h3>
-                <p>Sistema completo para restaurantes con pedidos online, reservas, panel administrativo, menu digital, control de ordenes y vista para cocina.</p>
-                <div class="tag-row"><span>Restaurant system</span><span>Admin panel</span><span>Desde $1,200 USD</span></div>
+                <p>A complete restaurant platform with online ordering, reservations, an admin dashboard, digital menu, order control and kitchen-ready views.</p>
+                <div class="tag-row"><span>Restaurant system</span><span>Admin panel</span><span>Starting at $1,200 USD</span></div>
               </div>
             </article>
           </div>
@@ -1841,8 +1907,8 @@
               <img src="assets/images/portfolio/modern-website-branding.png" alt="Modern Website Design & Branding">
               <div class="body">
                 <h3>Modern Website Design &amp; Branding</h3>
-                <p>Diseno web moderno con identidad visual profesional, branding, landing pages, contenido visual y presencia digital para negocios.</p>
-                <div class="tag-row"><span>Website</span><span>Branding</span><span>Desde $650 USD</span></div>
+                <p>Modern website design with professional visual identity, branding, landing pages and conversion-focused digital presence.</p>
+                <div class="tag-row"><span>Website</span><span>Branding</span><span>Starting at $650 USD</span></div>
               </div>
             </article>
           </div>
@@ -1851,8 +1917,8 @@
               <img src="assets/images/portfolio/social-media-design.png" alt="Social Media Design Package">
               <div class="body">
                 <h3>Social Media Design Package</h3>
-                <p>Disenos profesionales para redes sociales, anuncios, promociones y contenido visual para Instagram, Facebook y campanas digitales.</p>
-                <div class="tag-row"><span>Social media</span><span>Ads</span><span>Desde $150 USD</span></div>
+                <p>Professional designs for social media, ads, promotions and campaign-ready visual content for Instagram and Facebook.</p>
+                <div class="tag-row"><span>Social Media</span><span>Ads</span><span>Starting at $150 USD</span></div>
               </div>
             </article>
           </div>
@@ -1861,8 +1927,8 @@
               <img src="assets/images/portfolio/sakura-asian-kitchen.png" alt="Sakura Asian Kitchen Flyer">
               <div class="body">
                 <h3>Sakura Asian Kitchen Flyer</h3>
-                <p>Flyer promocional premium para restaurante asiatico, ideal para redes sociales, campanas locales, delivery y promociones de comida.</p>
-                <div class="tag-row"><span>Restaurant flyer</span><span>Delivery</span><span>Desde $85 USD</span></div>
+                <p>Premium promotional flyer for Asian restaurants, ideal for social media, local campaigns, delivery and food promotions.</p>
+                <div class="tag-row"><span>Restaurant flyer</span><span>Delivery</span><span>Starting at $85 USD</span></div>
               </div>
             </article>
           </div>
@@ -1871,8 +1937,8 @@
               <img src="assets/images/portfolio/italian-restaurant-flyer.png" alt="Italian Restaurant Flyer">
               <div class="body">
                 <h3>Italian Restaurant Flyer</h3>
-                <p>Diseno promocional para restaurante italiano con estilo elegante, menu destacado, descuento, delivery e informacion de contacto.</p>
-                <div class="tag-row"><span>Food promo</span><span>Menu design</span><span>Desde $85 USD</span></div>
+                <p>Elegant promotional design for Italian restaurants with featured menu items, offers, delivery details and contact information.</p>
+                <div class="tag-row"><span>Food promo</span><span>Menu design</span><span>Starting at $85 USD</span></div>
               </div>
             </article>
           </div>
@@ -1881,8 +1947,8 @@
               <img src="assets/images/portfolio/burger-restaurant-flyer.png" alt="Burger Restaurant Flyer">
               <div class="body">
                 <h3>Burger Restaurant Flyer</h3>
-                <p>Flyer moderno para restaurante de hamburguesas, ideal para promocionar combos, descuentos, delivery y menu principal.</p>
-                <div class="tag-row"><span>Burger promo</span><span>Food flyer</span><span>Desde $85 USD</span></div>
+                <p>Modern burger restaurant flyer designed to promote combos, offers, delivery and signature menu items.</p>
+                <div class="tag-row"><span>Burger promo</span><span>Food flyer</span><span>Starting at $85 USD</span></div>
               </div>
             </article>
           </div>
@@ -1893,91 +1959,118 @@
     <section id="pricing" class="section-soft">
       <div class="container">
         <div class="section-title center">
-          <span>Precios en Estados Unidos</span>
-          <h2>Planes claros para empezar, crecer o vender online.</h2>
-          <p>Los precios son referencias competitivas para pequeños negocios en USA. El precio final depende de páginas, contenido, funciones y rapidez de entrega.</p>
+          <span>Pricing for U.S. Businesses</span>
+          <h2>Clear plans to launch, grow or sell online.</h2>
+          <p>These are competitive starting prices for small businesses in the U.S. Final pricing depends on pages, content, features and delivery timeline.</p>
         </div>
         <div class="row">
           <div class="col-lg-4 mb-4">
             <article class="price-card">
-              <span class="price-label">Página inicial</span>
+              <span class="price-label">Starter Website</span>
               <h3>Starter Website</h3>
-              <div class="price">$799 <small>desde</small></div>
-              <p class="price-subnote">Pago único desde<br>Tiempo estimado: 5–10 días<br>Incluye soporte inicial</p>
-              <p class="price-note">Ideal para presentar un servicio, promoción o negocio nuevo.</p>
+              <div class="price">$799 <small>starting at</small></div>
+              <p class="price-subnote">One-time payment<br>Estimated delivery: 5–10 days<br>Includes initial support</p>
+              <p class="price-note">Ideal for presenting a service, promotion or new business with a professional online presence.</p>
               <ul class="included-list">
-                <li>1 página con hasta 6 secciones</li>
-                <li>Diseño responsive</li>
-                <li>Formulario, telefono y WhatsApp</li>
-                <li>SEO basico y carga rapida</li>
+                <li>1 page with up to 6 sections</li>
+                <li>Responsive design</li>
+                <li>Contact form, phone and WhatsApp</li>
+                <li>Basic SEO and fast loading</li>
               </ul>
-              <a class="btn-outline-brand mt-4 w-100" href="#contact">Quiero esta landing</a>
+              <a class="btn-outline-brand mt-4 w-100" href="#contact">I want this landing page</a>
             </article>
           </div>
           <div class="col-lg-4 mb-4">
             <article class="price-card featured">
-              <span class="price-label">Más recomendado · Best Value</span>
+              <span class="price-label">Most Popular · Best Value</span>
               <h3>Business Website</h3>
-              <div class="price">$1,499 <small>desde</small></div>
-              <p class="price-subnote">Pago único desde<br>Tiempo estimado: 5–10 días<br>Incluye soporte inicial</p>
-              <p class="price-note">Para empresas que necesitan explicar servicios y verse confiables.</p>
+              <div class="price">$1,499 <small>starting at</small></div>
+              <p class="price-subnote">One-time payment<br>Estimated delivery: 5–10 days<br>Includes initial support</p>
+              <p class="price-note">For businesses that need to explain their services clearly and look trustworthy online.</p>
               <ul class="included-list">
-                <li>Hasta 5 páginas o secciones completas</li>
-                <li>Contenido guiado y llamadas a la accion</li>
-                <li>SEO local inicial</li>
-                <li>Integración con Google Maps y redes</li>
+                <li>Up to 5 full pages or sections</li>
+                <li>Guided content and calls to action</li>
+                <li>Initial local SEO</li>
+                <li>Google Maps and social media integration</li>
               </ul>
-              <a class="btn-brand mt-4 w-100" href="https://wa.me/17862550098" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+              <a class="btn-brand mt-4 w-100" href="https://wa.me/17862550098" target="_blank" rel="noopener">Contact via WhatsApp</a>
             </article>
           </div>
           <div class="col-lg-4 mb-4">
             <article class="price-card">
-              <span class="price-label">Crecimiento</span>
+              <span class="price-label">Growth</span>
               <h3>Growth / Ecommerce</h3>
-              <div class="price">$2,499 <small>desde</small></div>
-              <p class="price-subnote">Pago único desde<br>Tiempo estimado: 5–10 días<br>Incluye soporte inicial</p>
-              <p class="price-note">Para vender productos o trabajar posicionamiento y marketing de forma continua.</p>
+              <div class="price">$2,499 <small>starting at</small></div>
+              <p class="price-subnote">One-time payment<br>Estimated delivery: 5–10 days<br>Includes initial support</p>
+              <p class="price-note">For businesses ready to sell products online or invest in ongoing SEO and marketing growth.</p>
               <ul class="included-list">
-                <li>Tienda online desde $2,499</li>
-                <li>SEO mensual desde $650/mes</li>
-                <li>Redes sociales desde $450/mes</li>
-                <li>Mantenimiento desde $120/mes</li>
+                <li>Online store starting at $2,499</li>
+                <li>Monthly SEO starting at $650/mo</li>
+                <li>Social media starting at $450/mo</li>
+                <li>Maintenance starting at $120/mo</li>
               </ul>
-              <a class="btn-outline-brand mt-4 w-100" href="#contact">Pedir plan personalizado</a>
+              <a class="btn-outline-brand mt-4 w-100" href="#contact">Request a custom plan</a>
             </article>
           </div>
         </div>
         <div class="pricing-included">
-          <h3>Incluido en todos los planes</h3>
+          <h3>Included in every plan</h3>
           <ul>
-            <li>Diseño responsive</li>
-            <li>Optimización básica</li>
-            <li>Integración WhatsApp</li>
-            <li>Formulario de contacto</li>
-            <li>Carga rápida</li>
-            <li>Soporte inicial</li>
+            <li>Responsive design</li>
+            <li>Basic optimization</li>
+            <li>WhatsApp integration</li>
+            <li>Contact form</li>
+            <li>Fast loading</li>
+            <li>Initial support</li>
           </ul>
         </div>
-        <p class="market-note">Referencia de mercado USA 2026: una web profesional para pequena empresa suele moverse entre $1,500 y $15,000; SEO profesional para pequenas empresas suele empezar alrededor de $1,500/mes en agencias grandes. Markingwebs ofrece paquetes de entrada mas accesibles para negocios que estan comenzando o quieren mejorar su presencia actual.</p>
+        <p class="market-note">U.S. market reference: professional small-business websites often range from $1,500 to $15,000, while agency SEO services commonly start around $1,500/month. Markingwebs offers accessible entry-level packages for businesses that are launching or improving their current online presence.</p>
+      </div>
+    </section>
+
+    <section id="stats" class="premium-stats-section">
+      <div class="container">
+        <div class="premium-stats-grid">
+          <div class="premium-stat-card">
+            <span class="premium-stat-icon"><i class="fa fa-check-circle"></i></span>
+            <strong class="premium-stat-number" data-count="35" data-prefix="+">0</strong>
+            <p>Completed projects</p>
+          </div>
+          <div class="premium-stat-card">
+            <span class="premium-stat-icon"><i class="fa fa-briefcase"></i></span>
+            <strong class="premium-stat-number" data-count="20" data-prefix="+">0</strong>
+            <p>Local businesses</p>
+          </div>
+          <div class="premium-stat-card">
+            <span class="premium-stat-icon"><i class="fa fa-calendar"></i></span>
+            <strong class="premium-stat-number" data-count="5">0</strong>
+            <p>Years of experience</p>
+          </div>
+          <div class="premium-stat-card">
+            <span class="premium-stat-icon"><i class="fa fa-mobile"></i></span>
+            <strong class="premium-stat-number" data-count="100" data-suffix="%">0</strong>
+            <p>Responsive design</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="testimonials" class="testimonials-section">
       <div class="container">
         <div class="section-title center">
-          <span>Reseñas</span>
-          <h2>Clientes satisfechos</h2>
-          <p>Negocios y emprendedores que confiaron en Markingwebs para crecer online.</p>
+          <span>Reviews</span>
+          <h2>Satisfied Clients</h2>
+          <p>Businesses and entrepreneurs who trusted Markingwebs to grow online.</p>
         </div>
 
         <div class="trust-stats">
           <div class="trust-stat">
             <strong>+35</strong>
-            <span>proyectos completados</span>
+            <span>completed projects</span>
           </div>
           <div class="trust-stat">
             <strong>+20</strong>
-            <span>negocios locales</span>
+            <span>local businesses</span>
           </div>
           <div class="trust-stat">
             <strong>100%</strong>
@@ -1997,7 +2090,7 @@
                 </div>
               </div>
               <div class="testimonial-stars">★★★★★</div>
-              <p>“Excelente trabajo. El sistema de pedidos online ayudó muchísimo a nuestro restaurante. Diseño moderno y muy profesional.”</p>
+              <p>“Excellent work. The online ordering system made a major difference for our restaurant. Modern, professional and easy to use.”</p>
             </article>
           </div>
           <div class="col-lg-3 col-md-6 mb-4">
@@ -2059,31 +2152,31 @@
         <div class="row align-items-start">
           <div class="col-lg-5 mb-4 mb-lg-0">
             <div class="section-title">
-              <span>Proceso</span>
-              <h2>Una forma ordenada de pasar de idea a pagina publicada.</h2>
-              <p>Te acompano a definir lo importante primero: que vendes, a quien atiendes, como te contactan y que debe decir la pagina para que el cliente avance.</p>
+              <span>Process</span>
+              <h2>A clear process from idea to published website.</h2>
+              <p>We define the essentials first: what you sell, who you serve, how customers contact you and what your website needs to say to convert.</p>
             </div>
           </div>
           <div class="col-lg-7">
             <div class="process-step">
               <div class="step-number">1</div>
               <div>
-                <h3>Diagnostico y objetivo</h3>
-                <p>Revisamos tu negocio, tu competencia, tus servicios y el tipo de cliente que quieres atraer.</p>
+                <h3>Discovery & Goals</h3>
+                <p>We review your business, competitors, services and the type of customer you want to attract.</p>
               </div>
             </div>
             <div class="process-step">
               <div class="step-number">2</div>
               <div>
-                <h3>Diseno y contenido</h3>
-                <p>Organizamos textos, imagenes, estructura, llamados a la accion y secciones de confianza.</p>
+                <h3>Design & Content</h3>
+                <p>We organize copy, visuals, structure, calls to action and trust-building sections.</p>
               </div>
             </div>
             <div class="process-step">
               <div class="step-number">3</div>
               <div>
-                <h3>Publicacion y mejoras</h3>
-                <p>Publicamos la pagina, conectamos medios de contacto y dejamos una base lista para SEO y marketing.</p>
+                <h3>Launch & Improvements</h3>
+                <p>We publish the site, connect contact channels and prepare a foundation for SEO and marketing.</p>
               </div>
             </div>
           </div>
@@ -2096,9 +2189,9 @@
         <div class="row align-items-center">
           <div class="col-lg-5 mb-4 mb-lg-0">
             <div class="section-title">
-              <span>Contacto</span>
-              <h2>Cuéntame qué negocio tienes y qué quieres lograr.</h2>
-              <p>Te respondo con una recomendacion clara del plan que mas conviene, el precio estimado y los proximos pasos.</p>
+              <span>Contact</span>
+              <h2>Tell us about your business and what you want to achieve.</h2>
+              <p>You will receive a clear recommendation, estimated pricing and the next steps.</p>
             </div>
             <div class="contact-line">
               <i class="fa fa-phone"></i>
@@ -2110,40 +2203,40 @@
             </div>
             <div class="contact-line">
               <i class="fa fa-map-marker"></i>
-              <span>Servicios remotos para negocios en Estados Unidos</span>
+              <span>Remote services for businesses across the United States</span>
             </div>
           </div>
           <div class="col-lg-7">
             <form class="contact-card" action="envia.php" method="post">
               <div class="row">
                 <div class="col-md-6 mb-3">
-                  <label for="nombre">Nombre</label>
+                  <label for="nombre">Name</label>
                   <input class="form-control" type="text" name="nombre" id="nombre" required>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <label for="telefono">Telefono</label>
+                  <label for="telefono">Phone</label>
                   <input class="form-control" type="tel" name="telefono" id="telefono" required>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <label for="correo">Correo</label>
+                  <label for="correo">Email</label>
                   <input class="form-control" type="email" name="correo" id="correo" required>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <label for="servicio">Servicio</label>
+                  <label for="servicio">Service</label>
                   <select class="custom-select" name="servicio" id="servicio" required>
-                    <option value="">Selecciona una opcion</option>
-                    <option value="Landing profesional">Landing profesional</option>
-                    <option value="Sitio para negocio">Sitio para negocio</option>
+                    <option value="">Select a service</option>
+                    <option value="Professional landing page">Professional landing page</option>
+                    <option value="Business website">Business website</option>
                     <option value="Ecommerce">Ecommerce</option>
-                    <option value="SEO o redes sociales">SEO o redes sociales</option>
+                    <option value="SEO or social media">SEO or social media</option>
                   </select>
                 </div>
                 <div class="col-12 mb-3">
-                  <label for="mensaje">Mensaje</label>
-                  <textarea class="form-control" name="mensaje" id="mensaje" placeholder="Ejemplo: necesito una pagina para mi negocio de limpieza en Miami..." required></textarea>
+                  <label for="mensaje">Message</label>
+                  <textarea class="form-control" name="mensaje" id="mensaje" placeholder="Example: I need a website for my cleaning business in Miami..." required></textarea>
                 </div>
                 <div class="col-12">
-                  <button class="btn-brand border-0 w-100" type="submit">Enviar solicitud</button>
+                  <button class="btn-brand border-0 w-100" type="submit">Send Request</button>
                 </div>
               </div>
             </form>
@@ -2155,11 +2248,11 @@
 
   <div class="portfolio-modal-overlay" id="portfolioModal" aria-hidden="true">
     <div class="portfolio-modal" role="dialog" aria-modal="true" aria-labelledby="portfolioModalTitle">
-      <button class="portfolio-modal-close" type="button" aria-label="Cerrar portafolio">&times;</button>
+      <button class="portfolio-modal-close" type="button" aria-label="Close portfolio">&times;</button>
       <div class="portfolio-modal-header">
         <img id="portfolioModalImage" src="" alt="">
         <div>
-          <span class="portfolio-modal-eyebrow">Project plans</span>
+          <span class="portfolio-modal-eyebrow">Project Plans</span>
           <h3 class="portfolio-modal-title" id="portfolioModalTitle"></h3>
           <p class="portfolio-modal-description" id="portfolioModalDescription"></p>
         </div>
@@ -2174,7 +2267,7 @@
         <div class="col-lg-7 mb-3 mb-lg-0">
           <div class="footer-brand-line">
             <span class="footer-code-icon"><i class="fa fa-code"></i></span>
-            <span>Desarrollado por <span class="footer-name">Michael Alexander Perez</span></span>
+            <span>Developed by <span class="footer-name">Michael Alexander Perez</span></span>
           </div>
           <p class="mb-0"><span class="footer-role">Full Stack Developer · UX/UI · Web Systems</span></p>
           <p class="mb-0">Professional Website Design · Branding · Digital Solutions</p>
@@ -2189,7 +2282,7 @@
       </div>
       <div class="row mt-3 pt-3" style="border-top: 1px solid rgba(255, 255, 255, 0.08);">
         <div class="col-12">
-          <p class="mb-0">&copy; 2026 Markingwebs. Todos los derechos reservados.</p>
+          <p class="mb-0">&copy; 2026 Markingwebs. All rights reserved.</p>
         </div>
       </div>
     </div>
@@ -2203,61 +2296,61 @@
         "restaurant-dashboard": {
           title: "Restaurant Ordering & Admin Dashboard System",
           image: "assets/images/portfolio/restaurant-dashboard.png",
-          description: "Sistema completo para restaurantes con pedidos online, reservas, panel administrativo, menu digital, control de ordenes y vista para cocina.",
+          description: "A complete restaurant platform with online ordering, reservations, an admin dashboard, digital menu, order control and kitchen-ready views.",
           plans: [
-            { name: "Plan Starter", price: "$1,200 USD", benefits: ["Landing page del restaurante", "Menu digital", "Carrito basico", "Panel admin basico", "Diseno responsive"] },
-            { name: "Plan Business", price: "$2,500 USD", benefits: ["Pedidos online completos", "Reservaciones", "Dashboard avanzado", "Gestion de menu", "Control de ordenes en vivo", "Notificaciones basicas"] },
-            { name: "Plan Premium SaaS", price: "$4,500+ USD", benefits: ["Sistema multi-restaurante", "Kitchen screen", "Analytics", "Roles de usuario", "Integracion WhatsApp/email", "Preparado para API y escalabilidad"] }
+            { name: "Plan Starter", price: "$1,200 USD", benefits: ["Restaurant landing page", "Digital menu", "Basic cart", "Basic admin panel", "Responsive design"] },
+            { name: "Plan Business", price: "$2,500 USD", benefits: ["Complete online ordering", "Reservations", "Advanced dashboard", "Menu management", "Live order tracking", "Basic notifications"] },
+            { name: "Plan Premium SaaS", price: "$4,500+ USD", benefits: ["Multi-restaurant system", "Kitchen screen", "Analytics", "User roles", "WhatsApp/email integration", "API-ready and scalable architecture"] }
           ]
         },
         "modern-website-branding": {
           title: "Modern Website Design & Branding",
           image: "assets/images/portfolio/modern-website-branding.png",
-          description: "Diseno web moderno con identidad visual profesional, branding, landing pages, contenido visual y presencia digital para negocios.",
+          description: "Modern website design with professional visual identity, branding, landing pages and conversion-focused digital presence.",
           plans: [
-            { name: "Plan Essential", price: "$650 USD", benefits: ["Pagina web profesional de 1 a 3 secciones", "Diseno responsive", "Branding visual basico", "Boton de contacto", "Optimizacion inicial"] },
-            { name: "Plan Professional", price: "$1,200 USD", benefits: ["Website de 5 secciones", "UX/UI personalizado", "Copy basico", "Galeria o portafolio", "Formulario de contacto", "Animaciones suaves"] },
-            { name: "Plan Premium Brand", price: "$2,000+ USD", benefits: ["Website completo", "Identidad visual avanzada", "Landing pages", "SEO basico", "Integracion redes sociales", "Diseno preparado para conversion"] }
+            { name: "Plan Essential", price: "$650 USD", benefits: ["Professional website with 1 to 3 sections", "Responsive design", "Basic visual branding", "Contact button", "Initial optimization"] },
+            { name: "Plan Professional", price: "$1,200 USD", benefits: ["5-section website", "Custom UX/UI", "Basic copywriting", "Gallery or portfolio", "Contact form", "Soft animations"] },
+            { name: "Plan Premium Brand", price: "$2,000+ USD", benefits: ["Complete website", "Advanced visual identity", "Landing pages", "Basic SEO", "Social media integration", "Conversion-focused design"] }
           ]
         },
         "social-media-design": {
           title: "Social Media Design Package",
           image: "assets/images/portfolio/social-media-design.png",
-          description: "Disenos profesionales para redes sociales, anuncios, promociones y contenido visual para Instagram, Facebook y campanas digitales.",
+          description: "Professional designs for social media, ads, promotions and campaign-ready visual content for Instagram and Facebook.",
           plans: [
-            { name: "Plan Basic", price: "$150 USD", benefits: ["5 posts para redes sociales", "Diseno adaptado a la marca", "Formato Instagram/Facebook", "1 ronda de cambios"] },
-            { name: "Plan Growth", price: "$300 USD", benefits: ["12 posts", "3 stories", "Estilo visual consistente", "Textos promocionales basicos", "2 rondas de cambios"] },
-            { name: "Plan Premium Content", price: "$550+ USD", benefits: ["20 posts", "8 stories", "Diseno para campanas", "Creativos para anuncios", "Calendario visual basico", "Archivos listos para publicar"] }
+            { name: "Plan Basic", price: "$150 USD", benefits: ["5 social media posts", "Brand-aligned design", "Instagram/Facebook format", "1 revision round"] },
+            { name: "Plan Growth", price: "$300 USD", benefits: ["12 posts", "3 stories", "Consistent visual style", "Basic promotional copy", "2 revision rounds"] },
+            { name: "Plan Premium Content", price: "$550+ USD", benefits: ["20 posts", "8 stories", "Campaign-ready design", "Ad creatives", "Basic visual calendar", "Files ready to publish"] }
           ]
         },
         "sakura-asian-kitchen": {
           title: "Sakura Asian Kitchen Flyer",
           image: "assets/images/portfolio/sakura-asian-kitchen.png",
-          description: "Flyer promocional premium para restaurante asiatico, ideal para redes sociales, campanas locales, delivery y promociones de comida.",
+          description: "Premium promotional flyer for Asian restaurants, ideal for social media, local campaigns, delivery and food promotions.",
           plans: [
-            { name: "Plan Basic Flyer", price: "$85 USD", benefits: ["Flyer individual", "Formato para redes sociales", "Diseno promocional", "1 ronda de cambios"] },
-            { name: "Plan Promo Pack", price: "$180 USD", benefits: ["2 flyers", "Version story", "Version post", "Ajuste de textos y precios", "2 rondas de cambios"] },
-            { name: "Plan Restaurant Campaign", price: "$350+ USD", benefits: ["Paquete visual para campana", "4 disenos promocionales", "Adaptacion para Facebook/Instagram", "Diseno de menu corto", "Archivos finales listos"] }
+            { name: "Plan Basic Flyer", price: "$85 USD", benefits: ["Single flyer", "Social media format", "Promotional design", "1 revision round"] },
+            { name: "Plan Promo Pack", price: "$180 USD", benefits: ["2 flyers", "Story version", "Post version", "Copy and price adjustments", "2 revision rounds"] },
+            { name: "Plan Restaurant Campaign", price: "$350+ USD", benefits: ["Visual campaign package", "4 promotional designs", "Facebook/Instagram adaptation", "Short menu design", "Final files ready"] }
           ]
         },
         "italian-restaurant-flyer": {
           title: "Italian Restaurant Flyer",
           image: "assets/images/portfolio/italian-restaurant-flyer.png",
-          description: "Diseno promocional para restaurante italiano con estilo elegante, menu destacado, descuento, delivery e informacion de contacto.",
+          description: "Elegant promotional design for Italian restaurants with featured menu items, offers, delivery details and contact information.",
           plans: [
-            { name: "Plan Basic Flyer", price: "$85 USD", benefits: ["Flyer individual", "Diseno elegante", "Formato post", "1 ronda de cambios"] },
-            { name: "Plan Menu Promo", price: "$180 USD", benefits: ["Flyer + mini menu visual", "Version story", "Version post", "2 rondas de cambios"] },
-            { name: "Plan Full Restaurant Promo", price: "$350+ USD", benefits: ["4 disenos promocionales", "Diseno para delivery", "Adaptacion para redes", "Archivos editables y finales", "Estilo visual de marca"] }
+            { name: "Plan Basic Flyer", price: "$85 USD", benefits: ["Single flyer", "Elegant design", "Post format", "1 revision round"] },
+            { name: "Plan Menu Promo", price: "$180 USD", benefits: ["Flyer + visual mini menu", "Story version", "Post version", "2 revision rounds"] },
+            { name: "Plan Full Restaurant Promo", price: "$350+ USD", benefits: ["4 promotional designs", "Delivery-focused design", "Social media adaptation", "Editable and final files", "Branded visual style"] }
           ]
         },
         "burger-restaurant-flyer": {
           title: "Burger Restaurant Flyer",
           image: "assets/images/portfolio/burger-restaurant-flyer.png",
-          description: "Flyer moderno para restaurante de hamburguesas, ideal para promocionar combos, descuentos, delivery y menu principal.",
+          description: "Modern burger restaurant flyer designed to promote combos, offers, delivery and signature menu items.",
           plans: [
-            { name: "Plan Basic Flyer", price: "$85 USD", benefits: ["Flyer individual", "Diseno moderno", "Formato para redes", "1 ronda de cambios"] },
-            { name: "Plan Combo Promo", price: "$180 USD", benefits: ["Flyer de combo", "Version story", "Version post", "Ajuste de precios/promos", "2 rondas de cambios"] },
-            { name: "Plan Food Campaign", price: "$350+ USD", benefits: ["Campana visual completa", "4 disenos para promociones", "Creativos para anuncios", "Adaptacion para delivery", "Archivos finales listos"] }
+            { name: "Plan Basic Flyer", price: "$85 USD", benefits: ["Single flyer", "Modern design", "Social media format", "1 revision round"] },
+            { name: "Plan Combo Promo", price: "$180 USD", benefits: ["Combo flyer", "Story version", "Post version", "Price/promo adjustments", "2 revision rounds"] },
+            { name: "Plan Food Campaign", price: "$350+ USD", benefits: ["Full visual campaign", "4 promotional designs", "Ad creatives", "Delivery adaptation", "Final files ready"] }
           ]
         }
       };
@@ -2279,7 +2372,7 @@
             '<h4>' + plan.name + '</h4>' +
             '<div class="portfolio-plan-price">' + plan.price + '</div>' +
             '<ul>' + plan.benefits.map(function (item) { return '<li>' + item + '</li>'; }).join("") + '</ul>' +
-            '<a class="portfolio-plan-button" href="#contact">Request this plan</a>' +
+            '<a class="portfolio-plan-button" href="#contact">Request This Plan</a>' +
           '</article>';
         }).join("");
       }
@@ -2322,6 +2415,56 @@
       modal.addEventListener("click", function (event) {
         if (event.target.classList.contains("portfolio-plan-button")) closeModal();
       });
+    })();
+  </script>
+  <script>
+    (function () {
+      var counters = document.querySelectorAll(".premium-stat-number");
+      if (!counters.length) return;
+
+      function animateCounter(counter) {
+        if (counter.getAttribute("data-counted") === "true") return;
+        counter.setAttribute("data-counted", "true");
+
+        var target = parseInt(counter.getAttribute("data-count"), 10) || 0;
+        var prefix = counter.getAttribute("data-prefix") || "";
+        var suffix = counter.getAttribute("data-suffix") || "";
+        var duration = 1200;
+        var startTime = null;
+
+        function tick(timestamp) {
+          if (!startTime) startTime = timestamp;
+          var progress = Math.min((timestamp - startTime) / duration, 1);
+          var eased = 1 - Math.pow(1 - progress, 3);
+          var value = Math.round(target * eased);
+          counter.textContent = prefix + value + suffix;
+
+          if (progress < 1) {
+            requestAnimationFrame(tick);
+          } else {
+            counter.textContent = prefix + target + suffix;
+          }
+        }
+
+        requestAnimationFrame(tick);
+      }
+
+      if ("IntersectionObserver" in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.35 });
+
+        counters.forEach(function (counter) {
+          observer.observe(counter);
+        });
+      } else {
+        counters.forEach(animateCounter);
+      }
     })();
   </script>
 </body>
