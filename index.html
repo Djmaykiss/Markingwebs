@@ -975,6 +975,484 @@
       object-position: center;
     }
 
+    #portfolio .portfolio-card {
+      cursor: pointer;
+    }
+
+    #portfolio .portfolio-card:focus-visible {
+      outline: 3px solid rgba(249, 115, 22, 0.38);
+      outline-offset: 4px;
+    }
+
+    .portfolio-modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 28px;
+      background: rgba(2, 6, 23, 0.72);
+      backdrop-filter: blur(8px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.22s ease, visibility 0.22s ease;
+    }
+
+    .portfolio-modal-overlay.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .portfolio-modal {
+      position: relative;
+      width: min(1120px, 100%);
+      max-height: min(88vh, 900px);
+      overflow-y: auto;
+      border-radius: 8px;
+      background: #ffffff;
+      border: 1px solid rgba(17, 24, 39, 0.08);
+      box-shadow: 0 28px 90px rgba(0, 0, 0, 0.28);
+      transform: scale(0.96);
+      opacity: 0;
+      transition: transform 0.22s ease, opacity 0.22s ease;
+    }
+
+    .portfolio-modal-overlay.is-open .portfolio-modal {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    .portfolio-modal-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      z-index: 2;
+      width: 38px;
+      height: 38px;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      background: #ffffff;
+      color: #111827;
+      font-size: 22px;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .portfolio-modal-header {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 22px;
+      padding: 30px 72px 24px 30px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .portfolio-modal-header img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid #e5e7eb;
+      background: #f3f4f6;
+    }
+
+    .portfolio-modal-eyebrow {
+      display: block;
+      margin-bottom: 6px;
+      color: #f97316;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .portfolio-modal-title {
+      margin: 0;
+      color: #111827;
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1.1;
+      font-weight: 800;
+    }
+
+    .portfolio-modal-description {
+      margin: 10px 0 0;
+      color: #5f6876;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .portfolio-modal-plans {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      padding: 24px 30px 30px;
+    }
+
+    .portfolio-plan-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      padding: 22px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      background: #ffffff;
+      box-shadow: 0 14px 34px rgba(17, 24, 39, 0.06);
+      transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .portfolio-plan-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(249, 115, 22, 0.45);
+      box-shadow: 0 18px 44px rgba(17, 24, 39, 0.1);
+    }
+
+    .portfolio-plan-card h4 {
+      margin: 0 0 8px;
+      color: #111827;
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .portfolio-plan-price {
+      margin-bottom: 16px;
+      color: #f97316;
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .portfolio-plan-card ul {
+      margin: 0 0 22px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .portfolio-plan-card li {
+      position: relative;
+      margin-bottom: 9px;
+      padding-left: 20px;
+      color: #4b5563;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .portfolio-plan-card li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #f97316;
+    }
+
+    .portfolio-plan-button {
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 10px 14px;
+      border-radius: 6px;
+      background: #111827;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .portfolio-plan-button:hover {
+      background: #f97316;
+      color: #ffffff;
+    }
+
+    #pricing .price-card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 18px 46px rgba(17, 24, 39, 0.07);
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+    }
+
+    #pricing .price-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(249, 115, 22, 0.36);
+      box-shadow: 0 26px 64px rgba(17, 24, 39, 0.12);
+    }
+
+    #pricing .price-card.featured {
+      border: 2px solid #f97316;
+      box-shadow: 0 28px 70px rgba(249, 115, 22, 0.18);
+    }
+
+    #pricing .price-card.featured::before {
+      content: "Más vendido";
+      position: absolute;
+      top: 18px;
+      right: -42px;
+      width: 160px;
+      padding: 7px 0;
+      background: #f97316;
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 800;
+      text-align: center;
+      text-transform: uppercase;
+      transform: rotate(35deg);
+    }
+
+    #pricing .price-label {
+      color: #111827;
+      background: #f3f4f6;
+    }
+
+    #pricing .price-card.featured .price-label {
+      color: #c2410c;
+      background: #fff3e8;
+    }
+
+    #pricing .price-subnote {
+      margin: 10px 0 22px;
+      color: #6b7280;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    #pricing .btn-brand,
+    #pricing .btn-outline-brand {
+      font-weight: 800;
+    }
+
+    #pricing .btn-outline-brand:hover {
+      background: #111827;
+      border-color: #111827;
+      color: #ffffff;
+    }
+
+    #pricing .pricing-included {
+      margin-top: 26px;
+      padding: 24px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      background: #ffffff;
+      box-shadow: 0 18px 46px rgba(17, 24, 39, 0.05);
+    }
+
+    #pricing .pricing-included h3 {
+      margin: 0 0 18px;
+      color: #111827;
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    #pricing .pricing-included ul {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px 18px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    #pricing .pricing-included li {
+      position: relative;
+      padding-left: 24px;
+      color: #4b5563;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    #pricing .pricing-included li::before {
+      content: "\f00c";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #f97316;
+      font-family: FontAwesome;
+      font-size: 13px;
+    }
+
+    .testimonials-section {
+      background: #ffffff;
+      padding: 92px 0;
+    }
+
+    .trust-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin: 0 0 34px;
+    }
+
+    .trust-stat {
+      padding: 18px 20px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      background: #ffffff;
+      box-shadow: 0 14px 36px rgba(17, 24, 39, 0.05);
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .trust-stat:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 46px rgba(17, 24, 39, 0.09);
+    }
+
+    .trust-stat strong {
+      display: block;
+      color: #111827;
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .trust-stat span {
+      display: block;
+      margin-top: 6px;
+      color: #667085;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .testimonial-card {
+      height: 100%;
+      padding: 24px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      background: #ffffff;
+      box-shadow: 0 18px 44px rgba(17, 24, 39, 0.06);
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+      animation: testimonialFade 0.45s ease both;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(249, 115, 22, 0.32);
+      box-shadow: 0 26px 64px rgba(17, 24, 39, 0.11);
+    }
+
+    .testimonial-top {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .testimonial-avatar {
+      width: 58px;
+      height: 58px;
+      flex: 0 0 58px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #fff3e8;
+      background: #f3f4f6;
+    }
+
+    .testimonial-card h3 {
+      margin: 0;
+      color: #111827;
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .testimonial-business,
+    .testimonial-location {
+      display: block;
+      color: #667085;
+      font-size: 12px;
+      line-height: 1.45;
+      font-weight: 600;
+    }
+
+    .testimonial-stars {
+      margin-bottom: 12px;
+      color: #f59e0b;
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+
+    .testimonial-card p {
+      margin: 0;
+      color: #4b5563;
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .client-industries {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 34px;
+    }
+
+    .client-industries span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 34px;
+      padding: 8px 14px;
+      border: 1px solid #e5e7eb;
+      border-radius: 999px;
+      color: #98a2b3;
+      background: #f9fafb;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    @keyframes testimonialFade {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 767px) {
+      #pricing .pricing-included ul {
+        grid-template-columns: 1fr;
+      }
+
+      .testimonials-section {
+        padding: 68px 0;
+      }
+
+      .trust-stats {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    body.portfolio-modal-open {
+      overflow: hidden;
+    }
+
+    @media (max-width: 991px) {
+      .portfolio-modal-overlay {
+        padding: 16px;
+      }
+
+      .portfolio-modal-header {
+        grid-template-columns: 1fr;
+        padding: 24px 58px 20px 22px;
+      }
+
+      .portfolio-modal-header img {
+        height: 170px;
+      }
+
+      .portfolio-modal-plans {
+        grid-template-columns: 1fr;
+        padding: 20px 22px 24px;
+      }
+    }
+
     .price-card.featured {
       border-color: #111827;
       box-shadow: none;
@@ -1349,7 +1827,7 @@
         </div>
         <div class="row">
           <div class="col-lg-4 mb-4">
-            <article class="work-card">
+            <article class="work-card portfolio-card" data-project="restaurant-dashboard" tabindex="0" role="button" aria-label="View plans for Restaurant Ordering & Admin Dashboard System">
               <img src="assets/images/portfolio/restaurant-dashboard.png" alt="Restaurant Ordering & Admin Dashboard System">
               <div class="body">
                 <h3>Restaurant Ordering &amp; Admin Dashboard System</h3>
@@ -1359,7 +1837,7 @@
             </article>
           </div>
           <div class="col-lg-4 mb-4">
-            <article class="work-card">
+            <article class="work-card portfolio-card" data-project="modern-website-branding" tabindex="0" role="button" aria-label="View plans for Modern Website Design & Branding">
               <img src="assets/images/portfolio/modern-website-branding.png" alt="Modern Website Design & Branding">
               <div class="body">
                 <h3>Modern Website Design &amp; Branding</h3>
@@ -1369,7 +1847,7 @@
             </article>
           </div>
           <div class="col-lg-4 mb-4">
-            <article class="work-card">
+            <article class="work-card portfolio-card" data-project="social-media-design" tabindex="0" role="button" aria-label="View plans for Social Media Design Package">
               <img src="assets/images/portfolio/social-media-design.png" alt="Social Media Design Package">
               <div class="body">
                 <h3>Social Media Design Package</h3>
@@ -1379,7 +1857,7 @@
             </article>
           </div>
           <div class="col-lg-4 mb-4">
-            <article class="work-card">
+            <article class="work-card portfolio-card" data-project="sakura-asian-kitchen" tabindex="0" role="button" aria-label="View plans for Sakura Asian Kitchen Flyer">
               <img src="assets/images/portfolio/sakura-asian-kitchen.png" alt="Sakura Asian Kitchen Flyer">
               <div class="body">
                 <h3>Sakura Asian Kitchen Flyer</h3>
@@ -1389,7 +1867,7 @@
             </article>
           </div>
           <div class="col-lg-4 mb-4">
-            <article class="work-card">
+            <article class="work-card portfolio-card" data-project="italian-restaurant-flyer" tabindex="0" role="button" aria-label="View plans for Italian Restaurant Flyer">
               <img src="assets/images/portfolio/italian-restaurant-flyer.png" alt="Italian Restaurant Flyer">
               <div class="body">
                 <h3>Italian Restaurant Flyer</h3>
@@ -1399,7 +1877,7 @@
             </article>
           </div>
           <div class="col-lg-4 mb-4">
-            <article class="work-card">
+            <article class="work-card portfolio-card" data-project="burger-restaurant-flyer" tabindex="0" role="button" aria-label="View plans for Burger Restaurant Flyer">
               <img src="assets/images/portfolio/burger-restaurant-flyer.png" alt="Burger Restaurant Flyer">
               <div class="body">
                 <h3>Burger Restaurant Flyer</h3>
@@ -1417,35 +1895,37 @@
         <div class="section-title center">
           <span>Precios en Estados Unidos</span>
           <h2>Planes claros para empezar, crecer o vender online.</h2>
-          <p>Los precios son referencias competitivas para pequenos negocios en USA. El precio final depende de paginas, contenido, funciones y rapidez de entrega.</p>
+          <p>Los precios son referencias competitivas para pequeños negocios en USA. El precio final depende de páginas, contenido, funciones y rapidez de entrega.</p>
         </div>
         <div class="row">
           <div class="col-lg-4 mb-4">
             <article class="price-card">
-              <span class="price-label">Pagina inicial</span>
-              <h3>Landing profesional</h3>
+              <span class="price-label">Página inicial</span>
+              <h3>Starter Website</h3>
               <div class="price">$799 <small>desde</small></div>
-              <p class="price-note">Ideal para presentar un servicio, promocion o negocio nuevo.</p>
+              <p class="price-subnote">Pago único desde<br>Tiempo estimado: 5–10 días<br>Incluye soporte inicial</p>
+              <p class="price-note">Ideal para presentar un servicio, promoción o negocio nuevo.</p>
               <ul class="included-list">
-                <li>1 pagina con hasta 6 secciones</li>
-                <li>Diseno responsive</li>
+                <li>1 página con hasta 6 secciones</li>
+                <li>Diseño responsive</li>
                 <li>Formulario, telefono y WhatsApp</li>
                 <li>SEO basico y carga rapida</li>
               </ul>
-              <a class="btn-outline-brand mt-4 w-100" href="#contact">Solicitar cotizacion</a>
+              <a class="btn-outline-brand mt-4 w-100" href="#contact">Quiero esta landing</a>
             </article>
           </div>
           <div class="col-lg-4 mb-4">
             <article class="price-card featured">
-              <span class="price-label">Mas recomendado</span>
-              <h3>Sitio para negocio</h3>
+              <span class="price-label">Más recomendado · Best Value</span>
+              <h3>Business Website</h3>
               <div class="price">$1,499 <small>desde</small></div>
+              <p class="price-subnote">Pago único desde<br>Tiempo estimado: 5–10 días<br>Incluye soporte inicial</p>
               <p class="price-note">Para empresas que necesitan explicar servicios y verse confiables.</p>
               <ul class="included-list">
-                <li>Hasta 5 paginas o secciones completas</li>
+                <li>Hasta 5 páginas o secciones completas</li>
                 <li>Contenido guiado y llamadas a la accion</li>
                 <li>SEO local inicial</li>
-                <li>Integracion con Google Maps y redes</li>
+                <li>Integración con Google Maps y redes</li>
               </ul>
               <a class="btn-brand mt-4 w-100" href="https://wa.me/17862550098" target="_blank" rel="noopener">Hablar por WhatsApp</a>
             </article>
@@ -1453,8 +1933,9 @@
           <div class="col-lg-4 mb-4">
             <article class="price-card">
               <span class="price-label">Crecimiento</span>
-              <h3>Ecommerce o SEO mensual</h3>
+              <h3>Growth / Ecommerce</h3>
               <div class="price">$2,499 <small>desde</small></div>
+              <p class="price-subnote">Pago único desde<br>Tiempo estimado: 5–10 días<br>Incluye soporte inicial</p>
               <p class="price-note">Para vender productos o trabajar posicionamiento y marketing de forma continua.</p>
               <ul class="included-list">
                 <li>Tienda online desde $2,499</li>
@@ -1462,11 +1943,114 @@
                 <li>Redes sociales desde $450/mes</li>
                 <li>Mantenimiento desde $120/mes</li>
               </ul>
-              <a class="btn-outline-brand mt-4 w-100" href="#contact">Pedir plan a medida</a>
+              <a class="btn-outline-brand mt-4 w-100" href="#contact">Pedir plan personalizado</a>
             </article>
           </div>
         </div>
+        <div class="pricing-included">
+          <h3>Incluido en todos los planes</h3>
+          <ul>
+            <li>Diseño responsive</li>
+            <li>Optimización básica</li>
+            <li>Integración WhatsApp</li>
+            <li>Formulario de contacto</li>
+            <li>Carga rápida</li>
+            <li>Soporte inicial</li>
+          </ul>
+        </div>
         <p class="market-note">Referencia de mercado USA 2026: una web profesional para pequena empresa suele moverse entre $1,500 y $15,000; SEO profesional para pequenas empresas suele empezar alrededor de $1,500/mes en agencias grandes. Markingwebs ofrece paquetes de entrada mas accesibles para negocios que estan comenzando o quieren mejorar su presencia actual.</p>
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonials-section">
+      <div class="container">
+        <div class="section-title center">
+          <span>Reseñas</span>
+          <h2>Clientes satisfechos</h2>
+          <p>Negocios y emprendedores que confiaron en Markingwebs para crecer online.</p>
+        </div>
+
+        <div class="trust-stats">
+          <div class="trust-stat">
+            <strong>+35</strong>
+            <span>proyectos completados</span>
+          </div>
+          <div class="trust-stat">
+            <strong>+20</strong>
+            <span>negocios locales</span>
+          </div>
+          <div class="trust-stat">
+            <strong>100%</strong>
+            <span>responsive design</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-4">
+            <article class="testimonial-card">
+              <div class="testimonial-top">
+                <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=160&q=80" alt="Carlos Mendoza">
+                <div>
+                  <h3>Carlos Mendoza</h3>
+                  <span class="testimonial-business">Restaurant Owner</span>
+                  <span class="testimonial-location">Miami, FL</span>
+                </div>
+              </div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p>“Excelente trabajo. El sistema de pedidos online ayudó muchísimo a nuestro restaurante. Diseño moderno y muy profesional.”</p>
+            </article>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <article class="testimonial-card">
+              <div class="testimonial-top">
+                <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=160&q=80" alt="Sarah Johnson">
+                <div>
+                  <h3>Sarah Johnson</h3>
+                  <span class="testimonial-business">Beauty Studio</span>
+                  <span class="testimonial-location">Houston, TX</span>
+                </div>
+              </div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p>“Our new website looks amazing. We started getting more clients during the first weeks.”</p>
+            </article>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <article class="testimonial-card">
+              <div class="testimonial-top">
+                <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80" alt="David Ramirez">
+                <div>
+                  <h3>David Ramirez</h3>
+                  <span class="testimonial-business">Construction Company</span>
+                  <span class="testimonial-location">Orlando, FL</span>
+                </div>
+              </div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p>“Fast communication, clean design and great branding work. Highly recommended.”</p>
+            </article>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <article class="testimonial-card">
+              <div class="testimonial-top">
+                <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=160&q=80" alt="Emily Carter">
+                <div>
+                  <h3>Emily Carter</h3>
+                  <span class="testimonial-business">Online Store</span>
+                  <span class="testimonial-location">Los Angeles, CA</span>
+                </div>
+              </div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p>“The ecommerce website feels premium and works perfectly on mobile devices.”</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="client-industries" aria-label="Client industries">
+          <span>Restaurant</span>
+          <span>Real Estate</span>
+          <span>Beauty</span>
+          <span>Construction</span>
+          <span>Ecommerce</span>
+        </div>
       </div>
     </section>
 
@@ -1569,6 +2153,21 @@
     </section>
   </main>
 
+  <div class="portfolio-modal-overlay" id="portfolioModal" aria-hidden="true">
+    <div class="portfolio-modal" role="dialog" aria-modal="true" aria-labelledby="portfolioModalTitle">
+      <button class="portfolio-modal-close" type="button" aria-label="Cerrar portafolio">&times;</button>
+      <div class="portfolio-modal-header">
+        <img id="portfolioModalImage" src="" alt="">
+        <div>
+          <span class="portfolio-modal-eyebrow">Project plans</span>
+          <h3 class="portfolio-modal-title" id="portfolioModalTitle"></h3>
+          <p class="portfolio-modal-description" id="portfolioModalDescription"></p>
+        </div>
+      </div>
+      <div class="portfolio-modal-plans" id="portfolioModalPlans"></div>
+    </div>
+  </div>
+
   <footer class="site-footer">
     <div class="container">
       <div class="row align-items-center">
@@ -1598,5 +2197,132 @@
 
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    (function () {
+      var portfolioProjects = {
+        "restaurant-dashboard": {
+          title: "Restaurant Ordering & Admin Dashboard System",
+          image: "assets/images/portfolio/restaurant-dashboard.png",
+          description: "Sistema completo para restaurantes con pedidos online, reservas, panel administrativo, menu digital, control de ordenes y vista para cocina.",
+          plans: [
+            { name: "Plan Starter", price: "$1,200 USD", benefits: ["Landing page del restaurante", "Menu digital", "Carrito basico", "Panel admin basico", "Diseno responsive"] },
+            { name: "Plan Business", price: "$2,500 USD", benefits: ["Pedidos online completos", "Reservaciones", "Dashboard avanzado", "Gestion de menu", "Control de ordenes en vivo", "Notificaciones basicas"] },
+            { name: "Plan Premium SaaS", price: "$4,500+ USD", benefits: ["Sistema multi-restaurante", "Kitchen screen", "Analytics", "Roles de usuario", "Integracion WhatsApp/email", "Preparado para API y escalabilidad"] }
+          ]
+        },
+        "modern-website-branding": {
+          title: "Modern Website Design & Branding",
+          image: "assets/images/portfolio/modern-website-branding.png",
+          description: "Diseno web moderno con identidad visual profesional, branding, landing pages, contenido visual y presencia digital para negocios.",
+          plans: [
+            { name: "Plan Essential", price: "$650 USD", benefits: ["Pagina web profesional de 1 a 3 secciones", "Diseno responsive", "Branding visual basico", "Boton de contacto", "Optimizacion inicial"] },
+            { name: "Plan Professional", price: "$1,200 USD", benefits: ["Website de 5 secciones", "UX/UI personalizado", "Copy basico", "Galeria o portafolio", "Formulario de contacto", "Animaciones suaves"] },
+            { name: "Plan Premium Brand", price: "$2,000+ USD", benefits: ["Website completo", "Identidad visual avanzada", "Landing pages", "SEO basico", "Integracion redes sociales", "Diseno preparado para conversion"] }
+          ]
+        },
+        "social-media-design": {
+          title: "Social Media Design Package",
+          image: "assets/images/portfolio/social-media-design.png",
+          description: "Disenos profesionales para redes sociales, anuncios, promociones y contenido visual para Instagram, Facebook y campanas digitales.",
+          plans: [
+            { name: "Plan Basic", price: "$150 USD", benefits: ["5 posts para redes sociales", "Diseno adaptado a la marca", "Formato Instagram/Facebook", "1 ronda de cambios"] },
+            { name: "Plan Growth", price: "$300 USD", benefits: ["12 posts", "3 stories", "Estilo visual consistente", "Textos promocionales basicos", "2 rondas de cambios"] },
+            { name: "Plan Premium Content", price: "$550+ USD", benefits: ["20 posts", "8 stories", "Diseno para campanas", "Creativos para anuncios", "Calendario visual basico", "Archivos listos para publicar"] }
+          ]
+        },
+        "sakura-asian-kitchen": {
+          title: "Sakura Asian Kitchen Flyer",
+          image: "assets/images/portfolio/sakura-asian-kitchen.png",
+          description: "Flyer promocional premium para restaurante asiatico, ideal para redes sociales, campanas locales, delivery y promociones de comida.",
+          plans: [
+            { name: "Plan Basic Flyer", price: "$85 USD", benefits: ["Flyer individual", "Formato para redes sociales", "Diseno promocional", "1 ronda de cambios"] },
+            { name: "Plan Promo Pack", price: "$180 USD", benefits: ["2 flyers", "Version story", "Version post", "Ajuste de textos y precios", "2 rondas de cambios"] },
+            { name: "Plan Restaurant Campaign", price: "$350+ USD", benefits: ["Paquete visual para campana", "4 disenos promocionales", "Adaptacion para Facebook/Instagram", "Diseno de menu corto", "Archivos finales listos"] }
+          ]
+        },
+        "italian-restaurant-flyer": {
+          title: "Italian Restaurant Flyer",
+          image: "assets/images/portfolio/italian-restaurant-flyer.png",
+          description: "Diseno promocional para restaurante italiano con estilo elegante, menu destacado, descuento, delivery e informacion de contacto.",
+          plans: [
+            { name: "Plan Basic Flyer", price: "$85 USD", benefits: ["Flyer individual", "Diseno elegante", "Formato post", "1 ronda de cambios"] },
+            { name: "Plan Menu Promo", price: "$180 USD", benefits: ["Flyer + mini menu visual", "Version story", "Version post", "2 rondas de cambios"] },
+            { name: "Plan Full Restaurant Promo", price: "$350+ USD", benefits: ["4 disenos promocionales", "Diseno para delivery", "Adaptacion para redes", "Archivos editables y finales", "Estilo visual de marca"] }
+          ]
+        },
+        "burger-restaurant-flyer": {
+          title: "Burger Restaurant Flyer",
+          image: "assets/images/portfolio/burger-restaurant-flyer.png",
+          description: "Flyer moderno para restaurante de hamburguesas, ideal para promocionar combos, descuentos, delivery y menu principal.",
+          plans: [
+            { name: "Plan Basic Flyer", price: "$85 USD", benefits: ["Flyer individual", "Diseno moderno", "Formato para redes", "1 ronda de cambios"] },
+            { name: "Plan Combo Promo", price: "$180 USD", benefits: ["Flyer de combo", "Version story", "Version post", "Ajuste de precios/promos", "2 rondas de cambios"] },
+            { name: "Plan Food Campaign", price: "$350+ USD", benefits: ["Campana visual completa", "4 disenos para promociones", "Creativos para anuncios", "Adaptacion para delivery", "Archivos finales listos"] }
+          ]
+        }
+      };
+
+      var modal = document.getElementById("portfolioModal");
+      var modalImage = document.getElementById("portfolioModalImage");
+      var modalTitle = document.getElementById("portfolioModalTitle");
+      var modalDescription = document.getElementById("portfolioModalDescription");
+      var modalPlans = document.getElementById("portfolioModalPlans");
+      var closeButton = modal.querySelector(".portfolio-modal-close");
+
+      function renderPlans(project) {
+        modalImage.src = project.image;
+        modalImage.alt = project.title;
+        modalTitle.textContent = project.title;
+        modalDescription.textContent = project.description;
+        modalPlans.innerHTML = project.plans.map(function (plan) {
+          return '<article class="portfolio-plan-card">' +
+            '<h4>' + plan.name + '</h4>' +
+            '<div class="portfolio-plan-price">' + plan.price + '</div>' +
+            '<ul>' + plan.benefits.map(function (item) { return '<li>' + item + '</li>'; }).join("") + '</ul>' +
+            '<a class="portfolio-plan-button" href="#contact">Request this plan</a>' +
+          '</article>';
+        }).join("");
+      }
+
+      function openModal(projectId) {
+        var project = portfolioProjects[projectId];
+        if (!project) return;
+        renderPlans(project);
+        modal.classList.add("is-open");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("portfolio-modal-open");
+        closeButton.focus();
+      }
+
+      function closeModal() {
+        modal.classList.remove("is-open");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("portfolio-modal-open");
+      }
+
+      document.querySelectorAll("#portfolio .portfolio-card").forEach(function (card) {
+        card.addEventListener("click", function () {
+          openModal(card.getAttribute("data-project"));
+        });
+        card.addEventListener("keydown", function (event) {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openModal(card.getAttribute("data-project"));
+          }
+        });
+      });
+
+      closeButton.addEventListener("click", closeModal);
+      modal.addEventListener("click", function (event) {
+        if (event.target === modal) closeModal();
+      });
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && modal.classList.contains("is-open")) closeModal();
+      });
+      modal.addEventListener("click", function (event) {
+        if (event.target.classList.contains("portfolio-plan-button")) closeModal();
+      });
+    })();
+  </script>
 </body>
 </html>
