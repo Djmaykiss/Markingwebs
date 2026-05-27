@@ -3,13 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Markingwebs builds professional websites, branding, SEO, social media and digital solutions for businesses in the United States.">
+  <meta name="description" content="Markingwebs is a premium digital agency building modern websites, branding, ecommerce and scalable digital solutions for businesses across the United States.">
   <meta name="author" content="Markingwebs">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Markingwebs | Premium Digital Agency for Modern Businesses">
+  <meta property="og:description" content="Websites, branding, ecommerce and digital solutions designed to help businesses grow faster online.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/hero-agency-banner.png">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="google-site-verification" content="7I3oPHNvRcxTSHs4aytQ3HA1bIXIluScVGWBmXFgr-Q">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="assets/images/logo01.png" type="image/x-icon">
-  <title>Markingwebs | Professional Web Design, Branding & Digital Marketing</title>
+  <title>Markingwebs | Premium Digital Agency for Websites, Branding & Ecommerce</title>
 
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/fontawesome.css">
@@ -1728,6 +1734,834 @@
         margin-left: 0;
       }
     }
+
+    /* Premium SaaS agency upgrade */
+    :root {
+      --blue: #2563eb;
+      --blue-dark: #1d4ed8;
+      --orange: #ff7a00;
+      --navy: #0b0f19;
+      --ink: #0f172a;
+      --muted: #64748b;
+      --soft: #f8fafc;
+      --line: #e2e8f0;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 8% 0%, rgba(37, 99, 235, 0.06), transparent 28rem),
+        radial-gradient(circle at 100% 12%, rgba(255, 122, 0, 0.06), transparent 26rem),
+        #ffffff;
+    }
+
+    .site-header {
+      background: rgba(255, 255, 255, 0.76);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.82);
+      box-shadow: 0 1px 0 rgba(15, 23, 42, 0.03);
+      transition: background 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .site-header.is-scrolled {
+      background: rgba(255, 255, 255, 0.9);
+      border-color: rgba(148, 163, 184, 0.3);
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+    }
+
+    .navbar-nav .nav-link {
+      position: relative;
+      color: #334155;
+      transition: color 0.2s ease;
+    }
+
+    .navbar-nav .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: 4px;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--blue), var(--orange));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.22s ease;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      color: var(--blue);
+    }
+
+    .navbar-nav .nav-link:hover::after,
+    .navbar-nav .nav-link.active::after {
+      transform: scaleX(1);
+    }
+
+    .btn-brand,
+    .btn-outline-brand {
+      border-radius: 999px;
+      min-height: 48px;
+      padding: 13px 22px;
+    }
+
+    .btn-brand {
+      background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+      box-shadow: 0 18px 38px rgba(37, 99, 235, 0.22);
+    }
+
+    .btn-brand:hover {
+      background: linear-gradient(135deg, var(--blue-dark), #0f3aa8);
+      transform: translateY(-2px);
+      box-shadow: 0 22px 48px rgba(37, 99, 235, 0.28);
+    }
+
+    .hero {
+      min-height: 820px;
+      padding: 106px 0 76px;
+      color: #ffffff;
+      background:
+        radial-gradient(circle at 74% 20%, rgba(37, 99, 235, 0.42), transparent 22rem),
+        radial-gradient(circle at 58% 82%, rgba(255, 122, 0, 0.22), transparent 20rem),
+        linear-gradient(135deg, #070a12 0%, #0b1020 48%, #111827 100%);
+      border-bottom: 0;
+      isolation: isolate;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      pointer-events: none;
+      z-index: -1;
+      filter: blur(14px);
+    }
+
+    .hero::before {
+      width: 420px;
+      height: 420px;
+      right: 8%;
+      top: 12%;
+      background: rgba(37, 99, 235, 0.2);
+      animation: floatGlow 9s ease-in-out infinite;
+    }
+
+    .hero::after {
+      width: 280px;
+      height: 280px;
+      left: 8%;
+      bottom: 10%;
+      background: rgba(255, 122, 0, 0.14);
+      animation: floatGlow 11s ease-in-out infinite reverse;
+    }
+
+    .hero h1 {
+      max-width: 760px;
+      color: #ffffff;
+      text-transform: none;
+      letter-spacing: 0;
+      font-size: clamp(46px, 6vw, 82px);
+      line-height: 0.98;
+    }
+
+    .hero p {
+      max-width: 640px;
+      color: rgba(226, 232, 240, 0.86);
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    .hero .eyebrow {
+      color: #93c5fd;
+    }
+
+    .hero .eyebrow::before {
+      background: var(--orange);
+    }
+
+    .hero .btn-outline-brand {
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.22);
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero .btn-outline-brand:hover {
+      border-color: rgba(255, 255, 255, 0.42);
+      background: rgba(255, 255, 255, 0.14);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .hero-metrics {
+      max-width: 720px;
+      gap: 12px;
+      border: 0;
+      margin-top: 44px;
+    }
+
+    .metric,
+    .metric:nth-child(2),
+    .metric:last-child {
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(16px);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
+    .metric strong {
+      color: #ffffff;
+      font-size: 18px;
+    }
+
+    .metric span {
+      color: rgba(226, 232, 240, 0.76);
+    }
+
+    .hero-showcase {
+      position: relative;
+      min-height: 540px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mockup-laptop {
+      width: min(520px, 100%);
+      padding: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 34px 90px rgba(0, 0, 0, 0.34);
+      backdrop-filter: blur(18px);
+      animation: floatCard 7s ease-in-out infinite;
+    }
+
+    .mockup-laptop img,
+    .mockup-phone img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
+    .mockup-laptop img {
+      aspect-ratio: 16 / 10;
+      object-position: left center;
+    }
+
+    .mockup-phone {
+      position: absolute;
+      right: -8px;
+      bottom: 24px;
+      width: 158px;
+      padding: 10px;
+      border-radius: 28px;
+      background: #050816;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.36);
+      animation: floatCard 6s ease-in-out infinite reverse;
+    }
+
+    .mockup-phone img {
+      aspect-ratio: 9 / 16;
+    }
+
+    .floating-card {
+      position: absolute;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      color: #e2e8f0;
+      background: rgba(15, 23, 42, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+      backdrop-filter: blur(14px);
+      font-size: 12px;
+      font-weight: 700;
+      animation: floatCard 8s ease-in-out infinite;
+    }
+
+    .floating-card i {
+      color: var(--orange);
+    }
+
+    .floating-card.card-top {
+      top: 42px;
+      left: 4px;
+    }
+
+    .floating-card.card-bottom {
+      left: 40px;
+      bottom: 52px;
+      animation-delay: -2s;
+    }
+
+    .hero-services {
+      position: absolute;
+      right: 18px;
+      top: 90px;
+      bottom: auto;
+      max-width: 230px;
+      border-radius: 18px;
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.22);
+    }
+
+    .hero-services span,
+    .hero-services li {
+      color: rgba(226, 232, 240, 0.82);
+    }
+
+    .hero-services h2 {
+      color: #ffffff;
+    }
+
+    .hero-services strong {
+      color: #ffffff;
+    }
+
+    .premium-card,
+    .service-card,
+    .price-card,
+    .work-card,
+    .contact-card,
+    .proof-item,
+    .testimonial-card,
+    .premium-stat-card {
+      border-radius: 16px;
+      transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+    }
+
+    .service-card:hover,
+    .work-card:hover,
+    .proof-item:hover {
+      transform: translateY(-5px);
+      border-color: rgba(37, 99, 235, 0.32);
+      box-shadow: 0 28px 70px rgba(15, 23, 42, 0.1);
+    }
+
+    .why-section {
+      background: #ffffff;
+    }
+
+    .why-grid,
+    .case-grid,
+    .tech-grid,
+    .faq-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .why-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .why-card,
+    .tech-item,
+    .case-card,
+    .faq-item {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 18px 46px rgba(15, 23, 42, 0.06);
+    }
+
+    .why-card {
+      padding: 26px;
+    }
+
+    .why-card i,
+    .case-category,
+    .tech-item i {
+      color: var(--blue);
+    }
+
+    .why-icon {
+      width: 48px;
+      height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(255, 122, 0, 0.12));
+      font-size: 19px;
+    }
+
+    .why-card h3,
+    .case-card h3,
+    .tech-item h3,
+    .faq-question {
+      margin: 0;
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .why-card p {
+      margin: 10px 0 0;
+      font-size: 14px;
+    }
+
+    .case-section {
+      background: #f8fafc;
+    }
+
+    .case-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .case-card {
+      overflow: hidden;
+      border-radius: 18px;
+    }
+
+    .case-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .case-body {
+      padding: 20px;
+    }
+
+    .case-category {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .case-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 16px 0;
+    }
+
+    .case-tech span {
+      padding: 5px 8px;
+      border-radius: 999px;
+      color: #475569;
+      background: #f1f5f9;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .case-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .case-actions a {
+      flex: 1;
+      min-height: 38px;
+      padding: 9px 10px;
+      border-radius: 999px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .case-actions a:first-child {
+      color: #ffffff;
+      background: var(--ink);
+    }
+
+    .case-actions a:last-child {
+      color: var(--ink);
+      background: #ffffff;
+      border: 1px solid var(--line);
+    }
+
+    .tech-section {
+      background: #0b0f19;
+      color: #ffffff;
+    }
+
+    .tech-section .section-title h2,
+    .tech-section .section-title span {
+      color: #ffffff;
+    }
+
+    .tech-section .section-title p {
+      color: rgba(226, 232, 240, 0.76);
+    }
+
+    .tech-grid {
+      grid-template-columns: repeat(8, minmax(0, 1fr));
+    }
+
+    .tech-item {
+      padding: 22px 14px;
+      border-color: rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.06);
+      text-align: center;
+    }
+
+    .tech-item:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(96, 165, 250, 0.34);
+    }
+
+    .tech-item i {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--orange);
+      font-size: 26px;
+    }
+
+    .tech-item h3 {
+      color: #ffffff;
+      font-size: 13px;
+    }
+
+    .process-line {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .process-line::before {
+      content: "";
+      position: absolute;
+      left: 12%;
+      right: 12%;
+      top: 28px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--blue), var(--orange));
+      opacity: 0.34;
+    }
+
+    .process-step {
+      position: relative;
+      display: block;
+      margin-bottom: 0;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #ffffff;
+      box-shadow: 0 18px 46px rgba(15, 23, 42, 0.06);
+    }
+
+    .step-number {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 18px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--blue), var(--orange));
+      box-shadow: 0 12px 28px rgba(37, 99, 235, 0.22);
+    }
+
+    .faq-section {
+      background: #ffffff;
+    }
+
+    .faq-grid {
+      max-width: 900px;
+      margin: 0 auto;
+      grid-template-columns: 1fr;
+    }
+
+    .faq-item {
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding: 22px 24px;
+      border: 0;
+      background: transparent;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .faq-question i {
+      color: var(--blue);
+      transition: transform 0.2s ease;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 24px;
+      transition: max-height 0.28s ease, padding 0.28s ease;
+    }
+
+    .faq-answer p {
+      margin: 0;
+      padding-bottom: 22px;
+    }
+
+    .faq-item.is-open .faq-answer {
+      max-height: 180px;
+      padding: 0 24px;
+    }
+
+    .faq-item.is-open .faq-question i {
+      transform: rotate(45deg);
+    }
+
+    .final-cta {
+      position: relative;
+      overflow: hidden;
+      padding: 88px 0;
+      color: #ffffff;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.34), transparent 22rem),
+        radial-gradient(circle at 84% 70%, rgba(255, 122, 0, 0.22), transparent 20rem),
+        #0b0f19;
+    }
+
+    .final-cta h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: clamp(34px, 4vw, 58px);
+      font-weight: 800;
+      line-height: 1.05;
+    }
+
+    .final-cta p {
+      max-width: 620px;
+      margin: 18px auto 0;
+      color: rgba(226, 232, 240, 0.78);
+      font-size: 17px;
+    }
+
+    .final-cta .hero-actions {
+      justify-content: center;
+    }
+
+    .testimonials-section {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 12% 10%, rgba(37, 99, 235, 0.08), transparent 24rem),
+        radial-gradient(circle at 86% 12%, rgba(255, 122, 0, 0.08), transparent 22rem),
+        #ffffff;
+    }
+
+    .testimonial-card {
+      border-color: rgba(226, 232, 240, 0.9);
+      background: rgba(255, 255, 255, 0.86);
+      backdrop-filter: blur(14px);
+    }
+
+    .site-footer {
+      padding: 58px 0 26px;
+    }
+
+    .footer-heading {
+      margin: 0 0 14px;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .footer-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer-list li {
+      margin-bottom: 9px;
+      color: #98a2b3;
+      font-size: 13px;
+    }
+
+    .footer-list a:hover {
+      color: #ffffff;
+    }
+
+    .availability {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 14px;
+      padding: 8px 11px;
+      border-radius: 999px;
+      color: #bbf7d0;
+      background: rgba(22, 163, 74, 0.12);
+      border: 1px solid rgba(34, 197, 94, 0.2);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .availability::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 5px rgba(34, 197, 94, 0.12);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    @keyframes floatGlow {
+      0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+      50% { transform: translate3d(18px, -12px, 0) scale(1.05); }
+    }
+
+    @media (max-width: 1199px) {
+      .case-grid,
+      .tech-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 991px) {
+      .hero {
+        min-height: auto;
+        background:
+          radial-gradient(circle at 70% 12%, rgba(37, 99, 235, 0.32), transparent 18rem),
+          linear-gradient(135deg, #070a12 0%, #0b1020 60%, #111827 100%);
+      }
+
+      .hero-showcase {
+        min-height: 440px;
+        margin-top: 24px;
+      }
+
+      .hero-services {
+        top: 20px;
+        right: 0;
+      }
+
+      .why-grid,
+      .process-line {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .process-line::before {
+        display: none;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .hero {
+        padding: 64px 0 52px;
+      }
+
+      .hero h1 {
+        font-size: clamp(34px, 10.5vw, 42px);
+        line-height: 1.04;
+      }
+
+      .hero p {
+        font-size: 15px;
+        line-height: 1.65;
+      }
+
+      .hero-actions {
+        gap: 10px;
+        margin-top: 24px;
+      }
+
+      .hero-actions .btn-brand,
+      .hero-actions .btn-outline-brand {
+        min-height: 44px;
+      }
+
+      .hero-metrics {
+        margin-top: 26px;
+      }
+
+      .metric,
+      .metric:nth-child(2),
+      .metric:last-child {
+        padding: 13px 14px;
+      }
+
+      .metric span {
+        margin-top: 5px;
+        font-size: 12px;
+        line-height: 1.45;
+      }
+
+      .hero-showcase {
+        display: block;
+        min-height: 0;
+        margin-top: 18px;
+      }
+
+      .mockup-laptop {
+        margin-top: 18px;
+      }
+
+      .mockup-phone,
+      .floating-card.card-bottom {
+        display: none;
+      }
+
+      .floating-card.card-top {
+        left: 10px;
+        top: 18px;
+      }
+
+      .hero-services {
+        display: none;
+      }
+
+      .why-grid,
+      .case-grid,
+      .tech-grid,
+      .process-line {
+        grid-template-columns: 1fr;
+      }
+
+      .case-actions {
+        flex-direction: column;
+      }
+
+      .site-footer {
+        text-align: left;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.001ms !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
   </style>
 </head>
 
@@ -1761,15 +2595,15 @@
         <div class="row align-items-center">
           <div class="col-lg-7">
             <span class="eyebrow">Web Design & Digital Marketing</span>
-            <h1>Digital marketing agency for growing businesses.</h1>
-            <p>Professional websites, local SEO, branding and digital marketing built to help U.S. businesses look credible and convert more customers.</p>
+            <h1>We Build Premium Digital Experiences for Modern Businesses.</h1>
+            <p>Websites, branding, ecommerce and digital solutions designed to help businesses grow faster online.</p>
             <div class="hero-actions">
-              <a class="btn-brand" href="#contact">Get Started</a>
-              <a class="btn-outline-brand" href="tel:+17862550098"><i class="fa fa-phone mr-2"></i> +1 786 255 0098</a>
+              <a class="btn-brand" href="#portfolio">View Portfolio</a>
+              <a class="btn-outline-brand" href="#contact">Get a Quote</a>
             </div>
             <div class="hero-metrics">
               <div class="metric">
-                <strong>7-14 dias</strong>
+                <strong>7-14 days</strong>
                 <span>Estimated delivery for a polished business website ready to launch.</span>
               </div>
               <div class="metric">
@@ -1783,17 +2617,27 @@
             </div>
           </div>
           <div class="col-lg-5 mt-5 mt-lg-0">
-            <aside class="hero-services">
-              <span>What we do</span>
-              <h2>Our services</h2>
-              <ul>
-                <li>Website design</li>
-                <li>Local SEO</li>
-                <li>Graphic Design</li>
-                <li>Social Media</li>
-              </ul>
-              <strong>Have an idea or project?</strong>
-            </aside>
+            <div class="hero-showcase" aria-label="Markingwebs digital project previews">
+              <div class="floating-card card-top"><i class="fa fa-line-chart"></i> Conversion-ready design</div>
+              <div class="mockup-laptop">
+                <img src="assets/images/portfolio/modern-website-branding.png" alt="Premium website and branding preview" loading="eager">
+              </div>
+              <div class="mockup-phone">
+                <img src="assets/images/portfolio/restaurant-dashboard.png" alt="Mobile restaurant dashboard preview" loading="eager">
+              </div>
+              <div class="floating-card card-bottom"><i class="fa fa-bolt"></i> Fast launch systems</div>
+              <aside class="hero-services">
+                <span>What we do</span>
+                <h2>Our services</h2>
+                <ul>
+                  <li>Website design</li>
+                  <li>Ecommerce</li>
+                  <li>Branding</li>
+                  <li>Automation</li>
+                </ul>
+                <strong>Have an idea or project?</strong>
+              </aside>
+            </div>
           </div>
         </div>
       </div>
@@ -1847,12 +2691,54 @@
       </div>
     </section>
 
+    <section id="why" class="why-section">
+      <div class="container">
+        <div class="section-title center">
+          <span>Why Choose Us</span>
+          <h2>Why Businesses Choose Markingwebs</h2>
+          <p>Premium execution, clear communication and modern digital systems built for real business growth.</p>
+        </div>
+        <div class="why-grid">
+          <article class="why-card premium-card">
+            <div class="why-icon"><i class="fa fa-bolt"></i></div>
+            <h3>Fast Delivery</h3>
+            <p>Lean project flow that gets your website launched quickly without sacrificing quality.</p>
+          </article>
+          <article class="why-card premium-card">
+            <div class="why-icon"><i class="fa fa-diamond"></i></div>
+            <h3>Modern UI/UX</h3>
+            <p>Clean layouts, strong hierarchy and interfaces designed to feel premium and easy to use.</p>
+          </article>
+          <article class="why-card premium-card">
+            <div class="why-icon"><i class="fa fa-mobile"></i></div>
+            <h3>Mobile Optimized</h3>
+            <p>Responsive experiences that look sharp on phones, tablets and desktop screens.</p>
+          </article>
+          <article class="why-card premium-card">
+            <div class="why-icon"><i class="fa fa-search"></i></div>
+            <h3>SEO Ready</h3>
+            <p>Technical structure, metadata and content hierarchy prepared for search visibility.</p>
+          </article>
+          <article class="why-card premium-card">
+            <div class="why-icon"><i class="fa fa-bullseye"></i></div>
+            <h3>Conversion Focused</h3>
+            <p>Every section is designed to explain your offer, build trust and move visitors to action.</p>
+          </article>
+          <article class="why-card premium-card">
+            <div class="why-icon"><i class="fa fa-star"></i></div>
+            <h3>Premium Branding</h3>
+            <p>Visual systems that help your business look credible, consistent and ready for the U.S. market.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="about" class="section-soft">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6 mb-4 mb-lg-0">
             <div class="about-image">
-              <img src="assets/images/markingwebs-agency-dark.png" alt="Markingwebs digital marketing agency">
+              <img src="assets/images/markingwebs-agency-dark.png" alt="Markingwebs digital marketing agency" loading="lazy">
             </div>
           </div>
           <div class="col-lg-6">
@@ -1884,6 +2770,26 @@
       </div>
     </section>
 
+    <section id="technology" class="tech-section">
+      <div class="container">
+        <div class="section-title center">
+          <span>Technology Stack</span>
+          <h2>Built with modern, reliable tools.</h2>
+          <p>Flexible technology choices for fast landing pages, business websites, ecommerce and scalable web systems.</p>
+        </div>
+        <div class="tech-grid">
+          <article class="tech-item"><i class="fa fa-html5"></i><h3>HTML5</h3></article>
+          <article class="tech-item"><i class="fa fa-css3"></i><h3>CSS3</h3></article>
+          <article class="tech-item"><i class="fa fa-code"></i><h3>JavaScript</h3></article>
+          <article class="tech-item"><i class="fa fa-cubes"></i><h3>React</h3></article>
+          <article class="tech-item"><i class="fa fa-wordpress"></i><h3>WordPress</h3></article>
+          <article class="tech-item"><i class="fa fa-th-large"></i><h3>Bootstrap</h3></article>
+          <article class="tech-item"><i class="fa fa-fire"></i><h3>Firebase</h3></article>
+          <article class="tech-item"><i class="fa fa-server"></i><h3>Node.js</h3></article>
+        </div>
+      </div>
+    </section>
+
     <section id="portfolio">
       <div class="container">
         <div class="section-title center">
@@ -1894,7 +2800,7 @@
         <div class="row">
           <div class="col-lg-4 mb-4">
             <article class="work-card portfolio-card" data-project="restaurant-dashboard" tabindex="0" role="button" aria-label="View plans for Restaurant Ordering & Admin Dashboard System">
-              <img src="assets/images/portfolio/restaurant-dashboard.png" alt="Restaurant Ordering & Admin Dashboard System">
+              <img src="assets/images/portfolio/restaurant-dashboard.png" alt="Restaurant Ordering & Admin Dashboard System" loading="lazy">
               <div class="body">
                 <h3>Restaurant Ordering &amp; Admin Dashboard System</h3>
                 <p>A complete restaurant platform with online ordering, reservations, an admin dashboard, digital menu, order control and kitchen-ready views.</p>
@@ -1904,7 +2810,7 @@
           </div>
           <div class="col-lg-4 mb-4">
             <article class="work-card portfolio-card" data-project="modern-website-branding" tabindex="0" role="button" aria-label="View plans for Modern Website Design & Branding">
-              <img src="assets/images/portfolio/modern-website-branding.png" alt="Modern Website Design & Branding">
+              <img src="assets/images/portfolio/modern-website-branding.png" alt="Modern Website Design & Branding" loading="lazy">
               <div class="body">
                 <h3>Modern Website Design &amp; Branding</h3>
                 <p>Modern website design with professional visual identity, branding, landing pages and conversion-focused digital presence.</p>
@@ -1914,7 +2820,7 @@
           </div>
           <div class="col-lg-4 mb-4">
             <article class="work-card portfolio-card" data-project="social-media-design" tabindex="0" role="button" aria-label="View plans for Social Media Design Package">
-              <img src="assets/images/portfolio/social-media-design.png" alt="Social Media Design Package">
+              <img src="assets/images/portfolio/social-media-design.png" alt="Social Media Design Package" loading="lazy">
               <div class="body">
                 <h3>Social Media Design Package</h3>
                 <p>Professional designs for social media, ads, promotions and campaign-ready visual content for Instagram and Facebook.</p>
@@ -1924,7 +2830,7 @@
           </div>
           <div class="col-lg-4 mb-4">
             <article class="work-card portfolio-card" data-project="sakura-asian-kitchen" tabindex="0" role="button" aria-label="View plans for Sakura Asian Kitchen Flyer">
-              <img src="assets/images/portfolio/sakura-asian-kitchen.png" alt="Sakura Asian Kitchen Flyer">
+              <img src="assets/images/portfolio/sakura-asian-kitchen.png" alt="Sakura Asian Kitchen Flyer" loading="lazy">
               <div class="body">
                 <h3>Sakura Asian Kitchen Flyer</h3>
                 <p>Premium promotional flyer for Asian restaurants, ideal for social media, local campaigns, delivery and food promotions.</p>
@@ -1934,7 +2840,7 @@
           </div>
           <div class="col-lg-4 mb-4">
             <article class="work-card portfolio-card" data-project="italian-restaurant-flyer" tabindex="0" role="button" aria-label="View plans for Italian Restaurant Flyer">
-              <img src="assets/images/portfolio/italian-restaurant-flyer.png" alt="Italian Restaurant Flyer">
+              <img src="assets/images/portfolio/italian-restaurant-flyer.png" alt="Italian Restaurant Flyer" loading="lazy">
               <div class="body">
                 <h3>Italian Restaurant Flyer</h3>
                 <p>Elegant promotional design for Italian restaurants with featured menu items, offers, delivery details and contact information.</p>
@@ -1944,7 +2850,7 @@
           </div>
           <div class="col-lg-4 mb-4">
             <article class="work-card portfolio-card" data-project="burger-restaurant-flyer" tabindex="0" role="button" aria-label="View plans for Burger Restaurant Flyer">
-              <img src="assets/images/portfolio/burger-restaurant-flyer.png" alt="Burger Restaurant Flyer">
+              <img src="assets/images/portfolio/burger-restaurant-flyer.png" alt="Burger Restaurant Flyer" loading="lazy">
               <div class="body">
                 <h3>Burger Restaurant Flyer</h3>
                 <p>Modern burger restaurant flyer designed to promote combos, offers, delivery and signature menu items.</p>
@@ -1952,6 +2858,58 @@
               </div>
             </article>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="case-studies" class="case-section">
+      <div class="container">
+        <div class="section-title center">
+          <span>Live Projects</span>
+          <h2>Premium project showcases for growing businesses.</h2>
+          <p>Case-study style concepts that show how Markingwebs builds digital systems around each business model.</p>
+        </div>
+        <div class="case-grid">
+          <article class="case-card premium-card">
+            <img src="assets/images/portfolio/restaurant-dashboard.png" alt="Restaurant dashboard project" loading="lazy">
+            <div class="case-body">
+              <span class="case-category">Restaurant Platform</span>
+              <h3>Restaurant Dashboard</h3>
+              <p>Online ordering, reservations, admin controls and kitchen workflow for modern restaurants.</p>
+              <div class="case-tech"><span>HTML</span><span>JS</span><span>Dashboard</span></div>
+              <div class="case-actions"><a href="#portfolio">View Project</a><a href="#contact">Case Study</a></div>
+            </div>
+          </article>
+          <article class="case-card premium-card">
+            <img src="assets/images/portfolio/modern-website-branding.png" alt="Ecommerce website project" loading="lazy">
+            <div class="case-body">
+              <span class="case-category">Ecommerce</span>
+              <h3>Ecommerce Website</h3>
+              <p>Premium product presentation, mobile-first shopping flow and conversion-ready sections.</p>
+              <div class="case-tech"><span>UX/UI</span><span>SEO</span><span>Checkout</span></div>
+              <div class="case-actions"><a href="#portfolio">View Project</a><a href="#contact">Case Study</a></div>
+            </div>
+          </article>
+          <article class="case-card premium-card">
+            <img src="assets/images/portfolio/social-media-design.png" alt="Real estate landing page project" loading="lazy">
+            <div class="case-body">
+              <span class="case-category">Real Estate</span>
+              <h3>Real Estate Landing Page</h3>
+              <p>Lead-focused landing page structure for property services, campaigns and local visibility.</p>
+              <div class="case-tech"><span>Landing</span><span>Forms</span><span>Ads</span></div>
+              <div class="case-actions"><a href="#portfolio">View Project</a><a href="#contact">Case Study</a></div>
+            </div>
+          </article>
+          <article class="case-card premium-card">
+            <img src="assets/images/portfolio/sakura-asian-kitchen.png" alt="Beauty studio website project" loading="lazy">
+            <div class="case-body">
+              <span class="case-category">Beauty Studio</span>
+              <h3>Beauty Studio Website</h3>
+              <p>Elegant service presentation, bookings, social proof and clear contact paths for local studios.</p>
+              <div class="case-tech"><span>Branding</span><span>Booking</span><span>Mobile</span></div>
+              <div class="case-actions"><a href="#portfolio">View Project</a><a href="#contact">Case Study</a></div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -2082,7 +3040,7 @@
           <div class="col-lg-3 col-md-6 mb-4">
             <article class="testimonial-card">
               <div class="testimonial-top">
-                <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=160&q=80" alt="Carlos Mendoza">
+                <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=160&q=80" alt="Carlos Mendoza" loading="lazy">
                 <div>
                   <h3>Carlos Mendoza</h3>
                   <span class="testimonial-business">Restaurant Owner</span>
@@ -2096,7 +3054,7 @@
           <div class="col-lg-3 col-md-6 mb-4">
             <article class="testimonial-card">
               <div class="testimonial-top">
-                <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=160&q=80" alt="Sarah Johnson">
+                <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=160&q=80" alt="Sarah Johnson" loading="lazy">
                 <div>
                   <h3>Sarah Johnson</h3>
                   <span class="testimonial-business">Beauty Studio</span>
@@ -2110,7 +3068,7 @@
           <div class="col-lg-3 col-md-6 mb-4">
             <article class="testimonial-card">
               <div class="testimonial-top">
-                <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80" alt="David Ramirez">
+                <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80" alt="David Ramirez" loading="lazy">
                 <div>
                   <h3>David Ramirez</h3>
                   <span class="testimonial-business">Construction Company</span>
@@ -2124,7 +3082,7 @@
           <div class="col-lg-3 col-md-6 mb-4">
             <article class="testimonial-card">
               <div class="testimonial-top">
-                <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=160&q=80" alt="Emily Carter">
+                <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=160&q=80" alt="Emily Carter" loading="lazy">
                 <div>
                   <h3>Emily Carter</h3>
                   <span class="testimonial-business">Online Store</span>
@@ -2149,37 +3107,79 @@
 
     <section id="process">
       <div class="container">
-        <div class="row align-items-start">
-          <div class="col-lg-5 mb-4 mb-lg-0">
-            <div class="section-title">
-              <span>Process</span>
-              <h2>A clear process from idea to published website.</h2>
-              <p>We define the essentials first: what you sell, who you serve, how customers contact you and what your website needs to say to convert.</p>
-            </div>
-          </div>
-          <div class="col-lg-7">
-            <div class="process-step">
-              <div class="step-number">1</div>
-              <div>
-                <h3>Discovery & Goals</h3>
-                <p>We review your business, competitors, services and the type of customer you want to attract.</p>
-              </div>
-            </div>
-            <div class="process-step">
-              <div class="step-number">2</div>
-              <div>
-                <h3>Design & Content</h3>
-                <p>We organize copy, visuals, structure, calls to action and trust-building sections.</p>
-              </div>
-            </div>
-            <div class="process-step">
-              <div class="step-number">3</div>
-              <div>
-                <h3>Launch & Improvements</h3>
-                <p>We publish the site, connect contact channels and prepare a foundation for SEO and marketing.</p>
-              </div>
-            </div>
-          </div>
+        <div class="section-title center">
+          <span>Our Process</span>
+          <h2>A clear process from idea to launch.</h2>
+          <p>We keep the project focused, organized and aligned with what your business needs to convert visitors into leads.</p>
+        </div>
+        <div class="process-line">
+          <article class="process-step">
+            <div class="step-number"><i class="fa fa-comments"></i></div>
+            <h3>1. Consultation</h3>
+            <p>We review your goals, audience, services, competitors and the outcome your website needs to create.</p>
+          </article>
+          <article class="process-step">
+            <div class="step-number"><i class="fa fa-pencil"></i></div>
+            <h3>2. Design</h3>
+            <p>We shape the layout, visual direction, messaging and user experience around your brand.</p>
+          </article>
+          <article class="process-step">
+            <div class="step-number"><i class="fa fa-code"></i></div>
+            <h3>3. Development</h3>
+            <p>We build the responsive website, connect forms, optimize structure and prepare launch assets.</p>
+          </article>
+          <article class="process-step">
+            <div class="step-number"><i class="fa fa-rocket"></i></div>
+            <h3>4. Launch</h3>
+            <p>We publish, test, review performance and provide initial support for a smooth handoff.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+      <div class="container">
+        <div class="section-title center">
+          <span>FAQ</span>
+          <h2>Questions before starting?</h2>
+          <p>Clear answers for business owners who want a professional website without a complicated process.</p>
+        </div>
+        <div class="faq-grid">
+          <article class="faq-item is-open">
+            <button class="faq-question" type="button">How long does a project take? <i class="fa fa-plus"></i></button>
+            <div class="faq-answer"><p>Most starter and business websites take 5 to 14 days depending on content, features, revisions and project scope.</p></div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button">Do you offer hosting? <i class="fa fa-plus"></i></button>
+            <div class="faq-answer"><p>Yes. We can help with hosting setup, domain connection, deployment and ongoing maintenance options.</p></div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button">Can I edit the website later? <i class="fa fa-plus"></i></button>
+            <div class="faq-answer"><p>Yes. Depending on the project, we can build editable sections or recommend a CMS such as WordPress.</p></div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button">Is mobile optimization included? <i class="fa fa-plus"></i></button>
+            <div class="faq-answer"><p>Yes. Every plan includes responsive design for mobile, tablet and desktop screens.</p></div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button">Do you provide SEO? <i class="fa fa-plus"></i></button>
+            <div class="faq-answer"><p>Initial SEO structure is included. Monthly SEO, content and local growth services are available as add-ons.</p></div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button">Can I request custom features? <i class="fa fa-plus"></i></button>
+            <div class="faq-answer"><p>Yes. We can scope custom dashboards, ecommerce features, restaurant ordering systems and API-ready integrations.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container text-center">
+        <h2>Ready to Grow Your Business Online?</h2>
+        <p>Let’s build a modern digital experience for your brand.</p>
+        <div class="hero-actions">
+          <a class="btn-brand" href="https://wa.me/17862550098" target="_blank" rel="noopener">Contact via WhatsApp</a>
+          <a class="btn-outline-brand" href="#contact">Request a Quote</a>
         </div>
       </div>
     </section>
@@ -2263,16 +3263,54 @@
 
   <footer class="site-footer">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-7 mb-3 mb-lg-0">
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <img class="footer-logo" src="assets/images/logo01.png" alt="Markingwebs" loading="lazy">
           <div class="footer-brand-line">
             <span class="footer-code-icon"><i class="fa fa-code"></i></span>
             <span>Developed by <span class="footer-name">Michael Alexander Perez</span></span>
           </div>
           <p class="mb-0"><span class="footer-role">Full Stack Developer · UX/UI · Web Systems</span></p>
           <p class="mb-0">Professional Website Design · Branding · Digital Solutions</p>
+          <span class="availability">Available for new projects</span>
         </div>
-        <div class="col-lg-5">
+        <div class="col-6 col-lg-2 mb-4 mb-lg-0">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-list">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+          <h3 class="footer-heading">Services</h3>
+          <ul class="footer-list">
+            <li>Website Design</li>
+            <li>Branding & UI/UX</li>
+            <li>Ecommerce Systems</li>
+            <li>SEO & Digital Growth</li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h3 class="footer-heading">Contact</h3>
+          <ul class="footer-list">
+            <li><a href="tel:+17862550098">+1 786 255 0098</a></li>
+            <li><a href="mailto:megaempresa.02@gmail.com">megaempresa.02@gmail.com</a></li>
+            <li>Serving businesses across the United States</li>
+          </ul>
+          <div class="social-links">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-3 pt-3" style="border-top: 1px solid rgba(255, 255, 255, 0.08);">
+        <div class="col-lg-6">
+          <p class="mb-0">&copy; 2026 Markingwebs. All rights reserved.</p>
+        </div>
+        <div class="col-lg-6">
           <div class="footer-meta">
             <span>Portfolio Website</span>
             <span>API-ready</span>
@@ -2280,16 +3318,75 @@
           </div>
         </div>
       </div>
-      <div class="row mt-3 pt-3" style="border-top: 1px solid rgba(255, 255, 255, 0.08);">
-        <div class="col-12">
-          <p class="mb-0">&copy; 2026 Markingwebs. All rights reserved.</p>
-        </div>
-      </div>
     </div>
   </footer>
 
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    (function () {
+      var header = document.querySelector(".site-header");
+      var navLinks = document.querySelectorAll(".navbar-nav .nav-link[href^='#']");
+      var revealItems = document.querySelectorAll(".service-card, .why-card, .proof-item, .work-card, .case-card, .price-card, .premium-stat-card, .testimonial-card, .process-step, .tech-item, .faq-item, .contact-card");
+
+      revealItems.forEach(function (item, index) {
+        item.classList.add("reveal");
+        item.style.transitionDelay = Math.min(index % 6, 5) * 55 + "ms";
+      });
+
+      function updateHeader() {
+        if (!header) return;
+        header.classList.toggle("is-scrolled", window.scrollY > 16);
+      }
+
+      function updateActiveLink() {
+        var current = "";
+        document.querySelectorAll("main section[id]").forEach(function (section) {
+          if (window.scrollY >= section.offsetTop - 130) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach(function (link) {
+          link.classList.toggle("active", link.getAttribute("href") === "#" + current);
+        });
+      }
+
+      updateHeader();
+      updateActiveLink();
+      window.addEventListener("scroll", function () {
+        updateHeader();
+        updateActiveLink();
+      }, { passive: true });
+
+      if ("IntersectionObserver" in window) {
+        var revealObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+
+        revealItems.forEach(function (item) {
+          revealObserver.observe(item);
+        });
+      } else {
+        revealItems.forEach(function (item) {
+          item.classList.add("is-visible");
+        });
+      }
+
+      document.querySelectorAll(".faq-question").forEach(function (button) {
+        button.addEventListener("click", function () {
+          var item = button.closest(".faq-item");
+          if (!item) return;
+          item.classList.toggle("is-open");
+        });
+      });
+    })();
+  </script>
   <script>
     (function () {
       var portfolioProjects = {
@@ -2453,15 +3550,13 @@
         var observer = new IntersectionObserver(function (entries) {
           entries.forEach(function (entry) {
             if (entry.isIntersecting) {
-              animateCounter(entry.target);
+              counters.forEach(animateCounter);
               observer.unobserve(entry.target);
             }
           });
-        }, { threshold: 0.35 });
+        }, { threshold: 0.18 });
 
-        counters.forEach(function (counter) {
-          observer.observe(counter);
-        });
+        observer.observe(document.querySelector(".premium-stats-section"));
       } else {
         counters.forEach(animateCounter);
       }
