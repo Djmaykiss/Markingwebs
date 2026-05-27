@@ -1939,6 +1939,27 @@
       animation: floatCard 7s ease-in-out infinite;
     }
 
+    .owner-hero-frame {
+      width: min(520px, 100%);
+      padding: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 28px;
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.06)),
+        rgba(15, 23, 42, 0.4);
+      box-shadow: 0 34px 90px rgba(0, 0, 0, 0.34);
+      backdrop-filter: blur(18px);
+      animation: floatCard 7s ease-in-out infinite;
+    }
+
+    .owner-hero-frame img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      object-position: center right;
+      border-radius: 20px;
+    }
+
     .mockup-laptop img,
     .mockup-phone img {
       width: 100%;
@@ -2523,6 +2544,10 @@
         margin-top: 18px;
       }
 
+      .owner-hero-frame {
+        margin-top: 18px;
+      }
+
       .mockup-phone,
       .floating-card.card-bottom {
         display: none;
@@ -2619,8 +2644,8 @@
           <div class="col-lg-5 mt-5 mt-lg-0">
             <div class="hero-showcase" aria-label="Markingwebs digital project previews">
               <div class="floating-card card-top"><i class="fa fa-line-chart"></i> Conversion-ready design</div>
-              <div class="mockup-laptop">
-                <img src="assets/images/portfolio/modern-website-branding.png" alt="Premium website and branding preview" loading="eager">
+              <div class="owner-hero-frame">
+                <img src="assets/images/hero-agency-banner.png" alt="Michael Alexander Perez, Markingwebs owner" loading="eager">
               </div>
               <div class="mockup-phone">
                 <img src="assets/images/portfolio/restaurant-dashboard.png" alt="Mobile restaurant dashboard preview" loading="eager">
