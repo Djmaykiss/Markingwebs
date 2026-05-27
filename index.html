@@ -2587,6 +2587,191 @@
         scroll-behavior: auto !important;
       }
     }
+
+    /* Owner branding protection: keep the original personal hero photo as the main visual. */
+    .hero {
+      min-height: 800px;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.94) 38%, rgba(255, 255, 255, 0.52) 58%, rgba(255, 255, 255, 0.08) 100%),
+        radial-gradient(circle at 18% 30%, rgba(37, 99, 235, 0.08), transparent 22rem),
+        url("assets/images/hero-agency-banner.png") center right / cover no-repeat;
+      border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+    }
+
+    .hero::before {
+      width: 340px;
+      height: 340px;
+      right: 16%;
+      top: 10%;
+      background: rgba(255, 122, 0, 0.12);
+    }
+
+    .hero::after {
+      width: 260px;
+      height: 260px;
+      left: 7%;
+      bottom: 12%;
+      background: rgba(37, 99, 235, 0.08);
+    }
+
+    .hero h1 {
+      max-width: 660px;
+      color: #101828;
+      text-shadow: none;
+    }
+
+    .hero p {
+      max-width: 610px;
+      color: #475467;
+    }
+
+    .hero .eyebrow {
+      color: #0f172a;
+    }
+
+    .hero .btn-outline-brand {
+      color: #0f172a;
+      border-color: #cbd5e1;
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .hero .btn-outline-brand:hover {
+      color: var(--blue);
+      border-color: rgba(37, 99, 235, 0.42);
+      background: #ffffff;
+    }
+
+    .hero-metrics {
+      max-width: 700px;
+      gap: 0;
+      border-top: 1px solid rgba(203, 213, 225, 0.86);
+      border-bottom: 1px solid rgba(203, 213, 225, 0.86);
+    }
+
+    .metric,
+    .metric:nth-child(2),
+    .metric:last-child {
+      padding: 20px 22px 20px 0;
+      border: 0;
+      border-right: 1px solid rgba(203, 213, 225, 0.86);
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      backdrop-filter: none;
+    }
+
+    .metric:nth-child(2),
+    .metric:last-child {
+      padding-left: 24px;
+    }
+
+    .metric:last-child {
+      border-right: 0;
+    }
+
+    .metric strong {
+      color: #0f172a;
+      font-size: 20px;
+    }
+
+    .metric span {
+      color: #64748b;
+    }
+
+    .owner-branding-showcase {
+      min-height: 520px;
+      display: block;
+    }
+
+    .owner-branding-showcase .floating-card {
+      left: auto;
+      right: 34px;
+      top: 18px;
+      color: #0f172a;
+      background: rgba(255, 255, 255, 0.82);
+      border-color: rgba(226, 232, 240, 0.92);
+      box-shadow: 0 18px 46px rgba(15, 23, 42, 0.12);
+    }
+
+    .hero-services {
+      right: 0;
+      top: 220px;
+      max-width: 292px;
+      color: #0f172a;
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid rgba(226, 232, 240, 0.95);
+      box-shadow: 0 24px 70px rgba(15, 23, 42, 0.14);
+      backdrop-filter: blur(14px);
+    }
+
+    .hero-services span,
+    .hero-services li {
+      color: #334155;
+    }
+
+    .hero-services h2 {
+      color: var(--orange);
+    }
+
+    .hero-services strong {
+      color: #0f172a;
+    }
+
+    @media (max-width: 991px) {
+      .hero {
+        background:
+          linear-gradient(90deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.72)),
+          url("assets/images/hero-agency-banner.png") center right / cover no-repeat;
+      }
+
+      .owner-branding-showcase {
+        min-height: 280px;
+      }
+
+      .hero-services {
+        position: relative;
+        top: auto;
+        right: auto;
+        max-width: 340px;
+        margin-left: auto;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .hero {
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.94) 48%, rgba(255, 255, 255, 0.34) 100%),
+          url("assets/images/hero-agency-banner.png") 67% bottom / auto 46% no-repeat,
+          #ffffff;
+        padding-bottom: 300px;
+      }
+
+      .owner-branding-showcase {
+        min-height: 0;
+        margin-top: 0;
+      }
+
+      .owner-branding-showcase .floating-card {
+        display: none;
+      }
+
+      .hero-services {
+        display: none;
+      }
+
+      .hero-metrics {
+        border-bottom: 0;
+      }
+
+      .metric,
+      .metric:nth-child(2),
+      .metric:last-child {
+        padding: 14px 0;
+        border-right: 0;
+        border-bottom: 1px solid rgba(203, 213, 225, 0.86);
+      }
+    }
   </style>
 </head>
 
@@ -2642,15 +2827,8 @@
             </div>
           </div>
           <div class="col-lg-5 mt-5 mt-lg-0">
-            <div class="hero-showcase" aria-label="Markingwebs digital project previews">
+            <div class="hero-showcase owner-branding-showcase" aria-label="Markingwebs owner branding">
               <div class="floating-card card-top"><i class="fa fa-line-chart"></i> Conversion-ready design</div>
-              <div class="owner-hero-frame">
-                <img src="assets/images/hero-agency-banner.png" alt="Michael Alexander Perez, Markingwebs owner" loading="eager">
-              </div>
-              <div class="mockup-phone">
-                <img src="assets/images/portfolio/restaurant-dashboard.png" alt="Mobile restaurant dashboard preview" loading="eager">
-              </div>
-              <div class="floating-card card-bottom"><i class="fa fa-bolt"></i> Fast launch systems</div>
               <aside class="hero-services">
                 <span>What we do</span>
                 <h2>Our services</h2>
