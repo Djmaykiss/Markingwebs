@@ -2772,6 +2772,44 @@
         border-bottom: 1px solid rgba(203, 213, 225, 0.86);
       }
     }
+
+    /* Portfolio image presentation only */
+    #portfolio .work-card,
+    #case-studies .case-card {
+      overflow: hidden;
+    }
+
+    #portfolio .work-card img,
+    #case-studies .case-card img {
+      width: 100%;
+      aspect-ratio: 3 / 2;
+      height: auto;
+      border-radius: 16px 16px 0 0;
+      background: #07111f;
+      object-position: center;
+      transition: transform 0.4s ease;
+    }
+
+    #portfolio .work-card:hover img,
+    #case-studies .case-card:hover img {
+      transform: scale(1.03);
+    }
+
+    #portfolio .work-card img[src*="modern-website-branding"],
+    #portfolio .work-card img[src*="social-media-design"],
+    #portfolio .work-card img[src*="sakura-asian-kitchen"],
+    #portfolio .work-card img[src*="italian-restaurant-flyer"],
+    #portfolio .work-card img[src*="burger-restaurant-flyer"],
+    #case-studies .case-card img[src*="modern-website-branding"],
+    #case-studies .case-card img[src*="social-media-design"],
+    #case-studies .case-card img[src*="sakura-asian-kitchen"] {
+      object-fit: contain;
+    }
+
+    #portfolio .work-card img[src*="restaurant-dashboard"],
+    #case-studies .case-card img[src*="restaurant-dashboard"] {
+      object-fit: cover;
+    }
   </style>
 </head>
 
