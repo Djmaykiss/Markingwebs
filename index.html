@@ -2788,6 +2788,7 @@
       background: #07111f;
       object-position: center;
       transition: transform 0.4s ease;
+      cursor: pointer;
     }
 
     #portfolio .work-card:hover img,
@@ -2809,6 +2810,253 @@
     #portfolio .work-card img[src*="restaurant-dashboard"],
     #case-studies .case-card img[src*="restaurant-dashboard"] {
       object-fit: cover;
+    }
+
+    #portfolio .work-card,
+    #case-studies .case-card {
+      position: relative;
+    }
+
+    #portfolio .work-card::after,
+    #case-studies .case-card::after {
+      content: "View Project";
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      z-index: 2;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(11, 15, 25, 0.72);
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      opacity: 0;
+      transform: translateY(-6px);
+      transition: opacity 0.24s ease, transform 0.24s ease;
+      pointer-events: none;
+      backdrop-filter: blur(10px);
+    }
+
+    #portfolio .work-card:hover::after,
+    #case-studies .case-card:hover::after {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #portfolio .work-card:hover,
+    #case-studies .case-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 28px 76px rgba(15, 23, 42, 0.14);
+    }
+
+    .portfolio-modal.is-wide {
+      width: min(1180px, 100%);
+    }
+
+    .portfolio-modal-media {
+      padding: 30px 30px 0;
+    }
+
+    .portfolio-modal-media img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
+      border-radius: 16px;
+      background: #07111f;
+      border: 1px solid #e5e7eb;
+    }
+
+    .portfolio-modal-content {
+      padding: 24px 30px 30px;
+    }
+
+    .portfolio-modal-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .modal-info-card {
+      padding: 20px;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      background: #ffffff;
+      box-shadow: 0 16px 44px rgba(17, 24, 39, 0.06);
+    }
+
+    .modal-info-card h4 {
+      margin: 0 0 12px;
+      color: #111827;
+      font-size: 16px;
+      font-weight: 800;
+    }
+
+    .modal-feature-list,
+    .modal-tech-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .modal-feature-list li {
+      position: relative;
+      margin-bottom: 9px;
+      padding-left: 24px;
+      color: #4b5563;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .modal-feature-list li::before {
+      content: "\f00c";
+      position: absolute;
+      left: 0;
+      top: 1px;
+      color: #f97316;
+      font-family: FontAwesome;
+      font-size: 13px;
+    }
+
+    .modal-tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .modal-tech-list span {
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: #f3f4f6;
+      color: #374151;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .modal-meta-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 16px 0;
+    }
+
+    .modal-meta-item {
+      padding: 14px;
+      border-radius: 14px;
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+    }
+
+    .modal-meta-item span {
+      display: block;
+      color: #667085;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .modal-meta-item strong {
+      display: block;
+      margin-top: 4px;
+      color: #111827;
+      font-size: 16px;
+      font-weight: 800;
+    }
+
+    .modal-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .modal-actions a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 11px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .modal-actions a:first-child {
+      color: #ffffff;
+      background: #111827;
+    }
+
+    .modal-actions a:last-child {
+      color: #ffffff;
+      background: #f97316;
+    }
+
+    .modal-actions > span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 11px 16px;
+      border-radius: 999px;
+      background: #f3f4f6;
+      color: #374151;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .modal-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .modal-gallery img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: contain;
+      border-radius: 14px;
+      background: #07111f;
+      border: 1px solid #e5e7eb;
+    }
+
+    .case-study-section + .case-study-section {
+      margin-top: 16px;
+    }
+
+    .case-study-section span {
+      display: block;
+      margin: 0 0 8px;
+      color: #f97316;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .case-study-section p {
+      margin: 0;
+      color: #4b5563;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 991px) {
+      .portfolio-modal-grid,
+      .modal-meta-row {
+        grid-template-columns: 1fr;
+      }
+
+      .modal-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .portfolio-modal-media,
+      .portfolio-modal-content {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
     }
   </style>
 </head>
@@ -3111,44 +3359,44 @@
           <p>Case-study style concepts that show how Markingwebs builds digital systems around each business model.</p>
         </div>
         <div class="case-grid">
-          <article class="case-card premium-card">
+          <article class="case-card premium-card" data-project="restaurant-dashboard">
             <img src="assets/images/portfolio/restaurant-dashboard.png" alt="Restaurant dashboard project" loading="lazy">
             <div class="case-body">
               <span class="case-category">Restaurant Platform</span>
               <h3>Restaurant Dashboard</h3>
               <p>Online ordering, reservations, admin controls and kitchen workflow for modern restaurants.</p>
               <div class="case-tech"><span>HTML</span><span>JS</span><span>Dashboard</span></div>
-              <div class="case-actions"><a href="#portfolio">View Project</a><a href="#contact">Case Study</a></div>
+              <div class="case-actions"><a href="#portfolio" data-modal-action="demo">View Project</a><a href="#contact" data-modal-action="case-study">Case Study</a></div>
             </div>
           </article>
-          <article class="case-card premium-card">
+          <article class="case-card premium-card" data-project="modern-website-branding">
             <img src="assets/images/portfolio/modern-website-branding.png" alt="Ecommerce website project" loading="lazy">
             <div class="case-body">
               <span class="case-category">Ecommerce</span>
               <h3>Ecommerce Website</h3>
               <p>Premium product presentation, mobile-first shopping flow and conversion-ready sections.</p>
               <div class="case-tech"><span>UX/UI</span><span>SEO</span><span>Checkout</span></div>
-              <div class="case-actions"><a href="#portfolio">View Project</a><a href="#contact">Case Study</a></div>
+              <div class="case-actions"><a href="#portfolio" data-modal-action="demo">View Project</a><a href="#contact" data-modal-action="case-study">Case Study</a></div>
             </div>
           </article>
-          <article class="case-card premium-card">
+          <article class="case-card premium-card" data-project="social-media-design">
             <img src="assets/images/portfolio/social-media-design.png" alt="Real estate landing page project" loading="lazy">
             <div class="case-body">
               <span class="case-category">Real Estate</span>
               <h3>Real Estate Landing Page</h3>
               <p>Lead-focused landing page structure for property services, campaigns and local visibility.</p>
               <div class="case-tech"><span>Landing</span><span>Forms</span><span>Ads</span></div>
-              <div class="case-actions"><a href="#portfolio">View Project</a><a href="#contact">Case Study</a></div>
+              <div class="case-actions"><a href="#portfolio" data-modal-action="demo">View Project</a><a href="#contact" data-modal-action="case-study">Case Study</a></div>
             </div>
           </article>
-          <article class="case-card premium-card">
+          <article class="case-card premium-card" data-project="sakura-asian-kitchen">
             <img src="assets/images/portfolio/sakura-asian-kitchen.png" alt="Beauty studio website project" loading="lazy">
             <div class="case-body">
               <span class="case-category">Beauty Studio</span>
               <h3>Beauty Studio Website</h3>
               <p>Elegant service presentation, bookings, social proof and clear contact paths for local studios.</p>
               <div class="case-tech"><span>Branding</span><span>Booking</span><span>Mobile</span></div>
-              <div class="case-actions"><a href="#portfolio">View Project</a><a href="#contact">Case Study</a></div>
+              <div class="case-actions"><a href="#portfolio" data-modal-action="demo">View Project</a><a href="#contact" data-modal-action="case-study">Case Study</a></div>
             </div>
           </article>
         </div>
@@ -3499,6 +3747,7 @@
         </div>
       </div>
       <div class="portfolio-modal-plans" id="portfolioModalPlans"></div>
+      <div id="portfolioModalDynamic"></div>
     </div>
   </div>
 
@@ -3635,61 +3884,91 @@
           title: "Restaurant Ordering & Admin Dashboard System",
           image: "assets/images/portfolio/restaurant-dashboard.png",
           description: "A complete restaurant platform with online ordering, reservations, an admin dashboard, digital menu, order control and kitchen-ready views.",
-          plans: [
-            { name: "Plan Starter", price: "$1,200 USD", benefits: ["Restaurant landing page", "Digital menu", "Basic cart", "Basic admin panel", "Responsive design"] },
-            { name: "Plan Business", price: "$2,500 USD", benefits: ["Complete online ordering", "Reservations", "Advanced dashboard", "Menu management", "Live order tracking", "Basic notifications"] },
-            { name: "Plan Premium SaaS", price: "$4,500+ USD", benefits: ["Multi-restaurant system", "Kitchen screen", "Analytics", "User roles", "WhatsApp/email integration", "API-ready and scalable architecture"] }
-          ]
+          technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Dashboard"],
+          time: "7-14 days",
+          price: "Starting at $1,200 USD",
+          features: ["Online Ordering", "Reservations", "Admin Dashboard", "Kitchen Screen", "Inventory Control", "Mobile Responsive"],
+          benefits: ["Faster order flow", "Cleaner kitchen operations", "Better customer experience", "More online sales"],
+          gallery: ["assets/images/portfolio/restaurant-dashboard.png", "assets/images/portfolio/modern-website-branding.png", "assets/images/portfolio/social-media-design.png"],
+          challenge: "Restaurants need a reliable way to accept orders, manage reservations and keep staff aligned without depending on scattered tools.",
+          solution: "A branded ordering system with admin controls, live order visibility and a responsive customer experience designed around restaurant operations.",
+          results: ["More leads", "Better branding", "Higher conversions", "Better customer experience"],
+          demoUrl: ""
         },
         "modern-website-branding": {
           title: "Modern Website Design & Branding",
           image: "assets/images/portfolio/modern-website-branding.png",
           description: "Modern website design with professional visual identity, branding, landing pages and conversion-focused digital presence.",
-          plans: [
-            { name: "Plan Essential", price: "$650 USD", benefits: ["Professional website with 1 to 3 sections", "Responsive design", "Basic visual branding", "Contact button", "Initial optimization"] },
-            { name: "Plan Professional", price: "$1,200 USD", benefits: ["5-section website", "Custom UX/UI", "Basic copywriting", "Gallery or portfolio", "Contact form", "Soft animations"] },
-            { name: "Plan Premium Brand", price: "$2,000+ USD", benefits: ["Complete website", "Advanced visual identity", "Landing pages", "Basic SEO", "Social media integration", "Conversion-focused design"] }
-          ]
+          technologies: ["HTML5", "CSS3", "JavaScript", "SEO", "Brand Systems"],
+          time: "5-10 days",
+          price: "Starting at $650 USD",
+          features: ["Responsive Website", "Visual Branding", "Landing Pages", "Contact Forms", "SEO Foundation", "Conversion Sections"],
+          benefits: ["Stronger credibility", "Clearer service presentation", "Better mobile experience", "More quote requests"],
+          gallery: ["assets/images/portfolio/modern-website-branding.png", "assets/images/portfolio/restaurant-dashboard.png", "assets/images/portfolio/social-media-design.png"],
+          challenge: "Growing businesses often look inconsistent online and lose trust before customers ever contact them.",
+          solution: "A polished website and visual system that presents the brand clearly, guides visitors and turns attention into action.",
+          results: ["More leads", "Better branding", "Higher conversions", "Better customer experience"],
+          demoUrl: ""
         },
         "social-media-design": {
           title: "Social Media Design Package",
           image: "assets/images/portfolio/social-media-design.png",
           description: "Professional designs for social media, ads, promotions and campaign-ready visual content for Instagram and Facebook.",
-          plans: [
-            { name: "Plan Basic", price: "$150 USD", benefits: ["5 social media posts", "Brand-aligned design", "Instagram/Facebook format", "1 revision round"] },
-            { name: "Plan Growth", price: "$300 USD", benefits: ["12 posts", "3 stories", "Consistent visual style", "Basic promotional copy", "2 revision rounds"] },
-            { name: "Plan Premium Content", price: "$550+ USD", benefits: ["20 posts", "8 stories", "Campaign-ready design", "Ad creatives", "Basic visual calendar", "Files ready to publish"] }
-          ]
+          technologies: ["Branding", "Ad Creative", "Instagram", "Facebook", "Campaign Design"],
+          time: "2-5 days",
+          price: "Starting at $150 USD",
+          features: ["Post Designs", "Story Versions", "Ad Creatives", "Promo Graphics", "Brand Consistency", "Ready-to-Publish Files"],
+          benefits: ["More consistent brand presence", "Better campaign visuals", "Higher engagement", "Faster promotion launches"],
+          gallery: ["assets/images/portfolio/social-media-design.png", "assets/images/portfolio/burger-restaurant-flyer.png", "assets/images/portfolio/italian-restaurant-flyer.png"],
+          challenge: "Brands need fresh visual content that looks professional and works across social platforms.",
+          solution: "A cohesive set of campaign visuals built around the offer, audience and brand style.",
+          results: ["More leads", "Better branding", "Higher conversions", "Better customer experience"],
+          demoUrl: ""
         },
         "sakura-asian-kitchen": {
           title: "Sakura Asian Kitchen Flyer",
           image: "assets/images/portfolio/sakura-asian-kitchen.png",
           description: "Premium promotional flyer for Asian restaurants, ideal for social media, local campaigns, delivery and food promotions.",
-          plans: [
-            { name: "Plan Basic Flyer", price: "$85 USD", benefits: ["Single flyer", "Social media format", "Promotional design", "1 revision round"] },
-            { name: "Plan Promo Pack", price: "$180 USD", benefits: ["2 flyers", "Story version", "Post version", "Copy and price adjustments", "2 revision rounds"] },
-            { name: "Plan Restaurant Campaign", price: "$350+ USD", benefits: ["Visual campaign package", "4 promotional designs", "Facebook/Instagram adaptation", "Short menu design", "Final files ready"] }
-          ]
+          technologies: ["Graphic Design", "Food Campaigns", "Social Media", "Delivery Promo"],
+          time: "2-4 days",
+          price: "Starting at $85 USD",
+          features: ["Single Flyer", "Post Format", "Delivery CTA", "Menu Highlights", "Promo Messaging", "Final Files"],
+          benefits: ["Stronger food presentation", "Clear promotion message", "More delivery interest", "Better social visuals"],
+          gallery: ["assets/images/portfolio/sakura-asian-kitchen.png", "assets/images/portfolio/italian-restaurant-flyer.png", "assets/images/portfolio/burger-restaurant-flyer.png"],
+          challenge: "Local restaurants need food promotions that stand out quickly in crowded social feeds.",
+          solution: "A bold food-focused flyer with strong hierarchy, appetizing imagery and a clear call to action.",
+          results: ["More leads", "Better branding", "Higher conversions", "Better customer experience"],
+          demoUrl: ""
         },
         "italian-restaurant-flyer": {
           title: "Italian Restaurant Flyer",
           image: "assets/images/portfolio/italian-restaurant-flyer.png",
           description: "Elegant promotional design for Italian restaurants with featured menu items, offers, delivery details and contact information.",
-          plans: [
-            { name: "Plan Basic Flyer", price: "$85 USD", benefits: ["Single flyer", "Elegant design", "Post format", "1 revision round"] },
-            { name: "Plan Menu Promo", price: "$180 USD", benefits: ["Flyer + visual mini menu", "Story version", "Post version", "2 revision rounds"] },
-            { name: "Plan Full Restaurant Promo", price: "$350+ USD", benefits: ["4 promotional designs", "Delivery-focused design", "Social media adaptation", "Editable and final files", "Branded visual style"] }
-          ]
+          technologies: ["Graphic Design", "Restaurant Promo", "Social Media", "Menu Design"],
+          time: "2-4 days",
+          price: "Starting at $85 USD",
+          features: ["Food Flyer", "Menu Highlight", "Delivery Message", "Promo CTA", "Social Format", "Final Files"],
+          benefits: ["Premium food presentation", "Clearer menu promotion", "More customer interest", "Stronger local campaign"],
+          gallery: ["assets/images/portfolio/italian-restaurant-flyer.png", "assets/images/portfolio/sakura-asian-kitchen.png", "assets/images/portfolio/burger-restaurant-flyer.png"],
+          challenge: "Restaurant promotions need to communicate quality, offer and ordering details at a glance.",
+          solution: "A refined flyer layout with strong food imagery, readable offer copy and conversion-focused contact cues.",
+          results: ["More leads", "Better branding", "Higher conversions", "Better customer experience"],
+          demoUrl: ""
         },
         "burger-restaurant-flyer": {
           title: "Burger Restaurant Flyer",
           image: "assets/images/portfolio/burger-restaurant-flyer.png",
           description: "Modern burger restaurant flyer designed to promote combos, offers, delivery and signature menu items.",
-          plans: [
-            { name: "Plan Basic Flyer", price: "$85 USD", benefits: ["Single flyer", "Modern design", "Social media format", "1 revision round"] },
-            { name: "Plan Combo Promo", price: "$180 USD", benefits: ["Combo flyer", "Story version", "Post version", "Price/promo adjustments", "2 revision rounds"] },
-            { name: "Plan Food Campaign", price: "$350+ USD", benefits: ["Full visual campaign", "4 promotional designs", "Ad creatives", "Delivery adaptation", "Final files ready"] }
-          ]
+          technologies: ["Graphic Design", "Food Promo", "Social Media", "Ad Creative"],
+          time: "2-4 days",
+          price: "Starting at $85 USD",
+          features: ["Burger Promo", "Combo Offer", "Delivery CTA", "Social Post", "Ad Creative", "Final Files"],
+          benefits: ["More appetizing presentation", "Better offer clarity", "More delivery clicks", "Stronger campaign visuals"],
+          gallery: ["assets/images/portfolio/burger-restaurant-flyer.png", "assets/images/portfolio/social-media-design.png", "assets/images/portfolio/italian-restaurant-flyer.png"],
+          challenge: "Food offers need to capture attention immediately and make ordering feel easy.",
+          solution: "A high-impact promotional design with strong product focus, pricing space and clear ordering direction.",
+          results: ["More leads", "Better branding", "Higher conversions", "Better customer experience"],
+          demoUrl: ""
         }
       };
 
@@ -3698,27 +3977,134 @@
       var modalTitle = document.getElementById("portfolioModalTitle");
       var modalDescription = document.getElementById("portfolioModalDescription");
       var modalPlans = document.getElementById("portfolioModalPlans");
+      var modalDynamic = document.getElementById("portfolioModalDynamic");
       var closeButton = modal.querySelector(".portfolio-modal-close");
+      var modalDialog = modal.querySelector(".portfolio-modal");
+      var modalEyebrow = modal.querySelector(".portfolio-modal-eyebrow");
+      var whatsappUrl = "https://wa.me/17862550098";
 
-      function renderPlans(project) {
-        modalImage.src = project.image;
-        modalImage.alt = project.title;
-        modalTitle.textContent = project.title;
-        modalDescription.textContent = project.description;
-        modalPlans.innerHTML = project.plans.map(function (plan) {
-          return '<article class="portfolio-plan-card">' +
-            '<h4>' + plan.name + '</h4>' +
-            '<div class="portfolio-plan-price">' + plan.price + '</div>' +
-            '<ul>' + plan.benefits.map(function (item) { return '<li>' + item + '</li>'; }).join("") + '</ul>' +
-            '<a class="portfolio-plan-button" href="#contact">Request This Plan</a>' +
-          '</article>';
+      function escapeHtml(value) {
+        return String(value || "").replace(/[&<>"']/g, function (character) {
+          return {
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#039;"
+          }[character];
+        });
+      }
+
+      function renderList(items) {
+        return (items || []).map(function (item) {
+          return "<li>" + escapeHtml(item) + "</li>";
         }).join("");
       }
 
-      function openModal(projectId) {
+      function renderTech(items) {
+        return (items || []).map(function (item) {
+          return "<span>" + escapeHtml(item) + "</span>";
+        }).join("");
+      }
+
+      function setModalBase(project, title, eyebrow) {
+        modalImage.src = project.image;
+        modalImage.alt = title;
+        modalTitle.textContent = title;
+        modalDescription.textContent = project.description;
+        modalEyebrow.textContent = eyebrow;
+        modalPlans.innerHTML = "";
+        modalPlans.style.display = "none";
+      }
+
+      function renderOverview(project, title) {
+        setModalBase(project, title, "Project Overview");
+        modalDynamic.innerHTML =
+          '<div class="portfolio-modal-media"><img src="' + escapeHtml(project.image) + '" alt="' + escapeHtml(title) + ' preview"></div>' +
+          '<div class="portfolio-modal-content">' +
+            '<div class="portfolio-modal-grid">' +
+              '<article class="modal-info-card">' +
+                '<h4>Professional Description</h4>' +
+                '<p>' + escapeHtml(project.description) + '</p>' +
+                '<div class="modal-meta-row">' +
+                  '<div class="modal-meta-item"><span>Estimated Time</span><strong>' + escapeHtml(project.time) + '</strong></div>' +
+                  '<div class="modal-meta-item"><span>Approx. Price</span><strong>' + escapeHtml(project.price) + '</strong></div>' +
+                '</div>' +
+                '<h4>Technologies Used</h4>' +
+                '<div class="modal-tech-list">' + renderTech(project.technologies) + '</div>' +
+              '</article>' +
+              '<article class="modal-info-card">' +
+                '<h4>Key Features</h4>' +
+                '<ul class="modal-feature-list">' + renderList(project.features) + '</ul>' +
+              '</article>' +
+            '</div>' +
+            '<div class="modal-actions">' +
+              '<a href="#contact" data-close-modal>Request Similar Project</a>' +
+              '<a href="' + whatsappUrl + '" target="_blank" rel="noopener">Contact on WhatsApp</a>' +
+            '</div>' +
+          '</div>';
+      }
+
+      function renderDemo(project, title) {
+        setModalBase(project, title, "Project Demo");
+        modalDynamic.innerHTML =
+          '<div class="portfolio-modal-content">' +
+            '<div class="modal-gallery">' + (project.gallery || [project.image]).map(function (image, index) {
+              return '<img src="' + escapeHtml(image) + '" alt="' + escapeHtml(title) + ' screenshot ' + (index + 1) + '">';
+            }).join("") + '</div>' +
+            '<div class="portfolio-modal-grid">' +
+              '<article class="modal-info-card">' +
+                '<h4>Benefits of the System</h4>' +
+                '<ul class="modal-feature-list">' + renderList(project.benefits) + '</ul>' +
+              '</article>' +
+              '<article class="modal-info-card">' +
+                '<h4>Functionality List</h4>' +
+                '<ul class="modal-feature-list">' + renderList(project.features) + '</ul>' +
+              '</article>' +
+            '</div>' +
+            '<div class="modal-actions">' +
+              (project.demoUrl ? '<a href="' + escapeHtml(project.demoUrl) + '" target="_blank" rel="noopener">View Live Demo</a>' : '<span>Demo available upon request</span>') +
+              '<a href="#contact" data-close-modal>Request Similar Project</a>' +
+            '</div>' +
+          '</div>';
+      }
+
+      function renderCaseStudy(project, title) {
+        setModalBase(project, title, "Case Study");
+        modalDynamic.innerHTML =
+          '<div class="portfolio-modal-media"><img src="' + escapeHtml(project.image) + '" alt="' + escapeHtml(title) + ' case study"></div>' +
+          '<div class="portfolio-modal-content">' +
+            '<div class="case-study-section"><span>THE CHALLENGE</span><p>' + escapeHtml(project.challenge) + '</p></div>' +
+            '<div class="case-study-section"><span>THE SOLUTION</span><p>' + escapeHtml(project.solution) + '</p></div>' +
+            '<div class="portfolio-modal-grid">' +
+              '<article class="modal-info-card">' +
+                '<h4>FEATURES</h4>' +
+                '<ul class="modal-feature-list">' + renderList(project.features) + '</ul>' +
+              '</article>' +
+              '<article class="modal-info-card">' +
+                '<h4>EXPECTED RESULTS</h4>' +
+                '<ul class="modal-feature-list">' + renderList(project.results) + '</ul>' +
+              '</article>' +
+            '</div>' +
+            '<div class="modal-actions">' +
+              '<span>Want a similar project?</span>' +
+              '<a href="' + whatsappUrl + '" target="_blank" rel="noopener">Contact on WhatsApp</a>' +
+            '</div>' +
+          '</div>';
+      }
+
+      function openModal(projectId, mode, overrideTitle) {
         var project = portfolioProjects[projectId];
         if (!project) return;
-        renderPlans(project);
+        var title = overrideTitle || project.title;
+        if (mode === "demo") {
+          renderDemo(project, title);
+        } else if (mode === "case-study") {
+          renderCaseStudy(project, title);
+        } else {
+          renderOverview(project, title);
+        }
+        modalDialog.classList.add("is-wide");
         modal.classList.add("is-open");
         modal.setAttribute("aria-hidden", "false");
         document.body.classList.add("portfolio-modal-open");
@@ -3729,6 +4115,8 @@
         modal.classList.remove("is-open");
         modal.setAttribute("aria-hidden", "true");
         document.body.classList.remove("portfolio-modal-open");
+        modalDialog.classList.remove("is-wide");
+        modalDynamic.innerHTML = "";
       }
 
       document.querySelectorAll("#portfolio .portfolio-card").forEach(function (card) {
@@ -3743,6 +4131,24 @@
         });
       });
 
+      document.querySelectorAll("#case-studies .case-card").forEach(function (card) {
+        var projectTitle = card.querySelector("h3") ? card.querySelector("h3").textContent.trim() : "";
+        var projectId = card.getAttribute("data-project");
+        var image = card.querySelector("img");
+        if (image) {
+          image.addEventListener("click", function () {
+            openModal(projectId, "overview", projectTitle);
+          });
+        }
+
+        card.querySelectorAll("[data-modal-action]").forEach(function (button) {
+          button.addEventListener("click", function (event) {
+            event.preventDefault();
+            openModal(projectId, button.getAttribute("data-modal-action"), projectTitle);
+          });
+        });
+      });
+
       closeButton.addEventListener("click", closeModal);
       modal.addEventListener("click", function (event) {
         if (event.target === modal) closeModal();
@@ -3751,7 +4157,7 @@
         if (event.key === "Escape" && modal.classList.contains("is-open")) closeModal();
       });
       modal.addEventListener("click", function (event) {
-        if (event.target.classList.contains("portfolio-plan-button")) closeModal();
+        if (event.target.hasAttribute("data-close-modal")) closeModal();
       });
     })();
   </script>
