@@ -2133,6 +2133,11 @@
       background: #f8fafc;
     }
 
+    /* TEMPORARILY DISABLED: remove this class from #case-studies to restore the Live Projects showcase. */
+    .portfolio-showcase-temporarily-disabled {
+      display: none;
+    }
+
     .case-grid {
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
@@ -3351,7 +3356,8 @@
       </div>
     </section>
 
-    <section id="case-studies" class="case-section">
+    <!-- TEMPORARILY DISABLED: Live Projects showcase preserved for quick reactivation. -->
+    <section id="case-studies" class="case-section portfolio-showcase-temporarily-disabled">
       <div class="container">
         <div class="section-title center">
           <span>Live Projects</span>
@@ -3402,6 +3408,7 @@
         </div>
       </div>
     </section>
+    <!-- END TEMPORARILY DISABLED: remove portfolio-showcase-temporarily-disabled to restore. -->
 
     <section id="pricing" class="section-soft">
       <div class="container">
